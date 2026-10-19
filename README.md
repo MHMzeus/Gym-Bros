@@ -1,2 +1,11 @@
 # Gym-Bros
-Me and a few lads were assigned a project to make our own Webpage so will be making one about our gym experiences. Additionally there will be talk about what to actual do in the gym if your starting out and not fall into a death spiral of ego lifting.
+- Paragraph worth of describing the project.
+
+## Table of Contents
+* Cutting the web pages contents into a digestible pieces of info.
+* .
+* .
+* .
+
+## Credits
+- Listing out our squad roles and what we all did and how we contributed to our teams project.
