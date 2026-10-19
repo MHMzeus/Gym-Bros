@@ -2,7 +2,7 @@
 - Paragraph worth of describing the project.
 
 ## Table of Contents
-* Cutting the web pages contents into a digestible pieces of info.
+* Cutting the web pages contents into digestible pieces of info.
 * .
 * .
 * .
