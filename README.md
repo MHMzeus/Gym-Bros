@@ -1,11 +1,13 @@
-# Gym-Bros
-- Paragraph worth of describing the project.
+# Fitness Mavericks
+Meie veebileht tutvustab jõusaali masinaid, mida saab asendada keha või kalisteenika harjutuste vastu. Selle lehe eesmärk on tuua rohkem võimalusi harjutuste sooritamiseks ja näidata, milliseid erinevad võimalused olemas on. Näitame, et saab teha ka korraliku trenni ilma jõusaali astudes. 
 
-## Table of Contents
-* Cutting the web pages contents into digestible pieces of info.
-* .
-* .
-* .
+## Tiimi liikmed
+* Romet Reismann
+* Markkus Hendrik Marken
+* David Chiboshvili
 
-## Credits
-- Listing out our squad roles and what we all did and how we contributed to our teams project.
+## Tööjaotus
+* Romet Reismann: Kohtumiste koordinaator; Projektikoordinaator; Sisulooja(Tekstid)
+* Markkus Hendrik Marken: Projekti manager; Kodulehe Host; Testija
+* David Chiboshvili: Ui-disainer; Artist
+* Koos tegutsemine: GitHub; HTML; CSS
