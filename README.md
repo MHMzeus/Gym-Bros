@@ -1,11 +1,13 @@
 # Fitness Mavericks
-- Paragraph worth of describing the project.
+Meie veebileht tutvustab jõusaali masinaid, mida saab asendada keha või kalisteenika harjutuste vastu. Selle lehe eesmärk on tuua rohkem võimalusi harjutuste sooritamiseks ja näidata, milliseid erinevad võimalused olemas on. Näitame, et saab teha ka korraliku trenni ilma jõusaali astudes. 
 
-## Table of Contents
-* Cutting the web pages contents into digestible pieces of info.
-* .
-* .
-* .
+## Tiimi liikmed
+* Romet Reismann
+* Markkus Hendrik
+* David Chibosvili
 
-## Credits
-- Listing out our squad roles and what we all did and how we contributed to our teams project.
+## Tööjaotus
+* Romet Reismann: Kohtumiste koordinaator; Projektikoordinaator; Sisulooja(Tekstid)
+* Markkus Hendrik: Projekti manager; Kodulehe Host; Testija
+* David Chibosvili: Ui-disainer; Artist
+* Koos tegutsemine: GitHub; HTML; CSS
