@@ -1,4 +1,4 @@
-# Gym-Bros
+# Fitness Mavericks
 - Paragraph worth of describing the project.
 
 ## Table of Contents
