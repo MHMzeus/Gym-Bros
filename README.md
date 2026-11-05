@@ -3,11 +3,11 @@ Meie veebileht tutvustab jõusaali masinaid, mida saab asendada keha või kalist
 
 ## Tiimi liikmed
 * Romet Reismann
-* Markkus Hendrik
-* David Chibosvili
+* Markkus Hendrik Marken
+* David Chiboshvili
 
 ## Tööjaotus
 * Romet Reismann: Kohtumiste koordinaator; Projektikoordinaator; Sisulooja(Tekstid)
-* Markkus Hendrik: Projekti manager; Kodulehe Host; Testija
-* David Chibosvili: Ui-disainer; Artist
+* Markkus Hendrik Marken: Projekti manager; Kodulehe Host; Testija
+* David Chiboshvili: Ui-disainer; Artist
 * Koos tegutsemine: GitHub; HTML; CSS
