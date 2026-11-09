@@ -1,0 +1,90 @@
+/*Üldine lehe paigutus*/
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color:#ffffff;
+    color:#1a1a1a;
+    margin: 0;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.1;
+}
+
+/* Ühine logo ja menüü jaotamine kahele poole */
+.peamine-pais {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+}
+
+/*Pilt/Logo*/
+.logo-ala {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-ala img {
+    max-width: 80px;
+    height: auto;
+    margin-bottom: 5px;
+}
+
+.logo-ala h5 {
+    color: #000000;
+    font-size: 13px;
+    margin: 0;
+    font-weight: 700;
+}
+
+/* Menüü paigutus*/
+.menu-ala {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: flex-end;
+}
+
+/* Menüü nupud */
+.menu-ala button, .menu-ala input[type="button"] {
+    background-color: transparent;
+    border: none;
+    padding: 8px 12px;
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+    border-radius: 4px;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+/* Fitness Mavericks */
+.logo-ala h5 {
+    color:#000000;
+    font-size: 13px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+/* Nupud ja navigatsioon */
+button, input[type="submit"], input[type="button"] {
+    background-color: #ffffff;
+    color: #000000;
+    border: 2px solid #000000;
+    padding: 10px 20px;
+    margin:5px 5px 15px 0;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+/*Nupu hover efekt*/
+.menu-ala button:hover, .menu-ala input[type="button"]:hover{
+    background-color: #f0f0f0;
+    color: #e63946;
+    box-shadow: none;
+}
