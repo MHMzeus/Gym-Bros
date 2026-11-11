@@ -15,8 +15,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 20px;
-    margin-bottom: 10px;
+    padding-bottom: 2px;
+    margin-bottom: 2px;
 }
 
 /*Pilt/Logo*/
@@ -27,14 +27,14 @@ body {
 }
 
 .logo-ala img {
-    max-width: 80px;
+    max-width: 100px;
     height: auto;
-    margin-bottom: 5px;
+    margin-bottom: 2px;
 }
 
-.logo-ala h5 {
+.logo-ala {
     color: #000000;
-    font-size: 13px;
+    font-size: 16px;
     margin: 0;
     font-weight: 700;
 }
@@ -43,7 +43,7 @@ body {
 .menu-ala {
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 10px;
     justify-content: flex-end;
 }
 
@@ -51,12 +51,12 @@ body {
 .menu-ala button, .menu-ala input[type="button"] {
     background-color: transparent;
     border: none;
-    padding: 8px 12px;
+    padding: 8px 20px;
     margin: 0;
-    font-size: 16px;
-    font-weight: 600;
+    font-size: 18px;
+    font-weight: 700;
     color: #1a1a1a;
-    border-radius: 4px;
+    border-radius: 25px;
     transition: color 0.3s, background-color 0.3s;
 }
 
@@ -78,7 +78,7 @@ button, input[type="submit"], input[type="button"] {
     font-size: 15px;
     font-weight: bold;
     cursor: pointer;
-    border-radius: 6px;
+    border-radius: 25px;
     transition: all 0.3s ease;
 }
 
@@ -87,4 +87,27 @@ button, input[type="submit"], input[type="button"] {
     background-color: #f0f0f0;
     color: #e63946;
     box-shadow: none;
+}
+
+/*Description of front page*/
+.description{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: 800;
+    margin-top: 100px;
+    margin-bottom: 400px;
+}
+
+
+/* license centralization */
+.bottom_license {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 10px;
 }
