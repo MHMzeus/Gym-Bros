@@ -15,8 +15,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 2px;
-    margin-bottom: 2px;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
 /*Pilt/Logo*/
@@ -74,7 +74,7 @@ button, input[type="submit"], input[type="button"] {
     color: #000000;
     border: 2px solid #000000;
     padding: 10px 20px;
-    margin:5px 5px 15px 0;
+    margin: 5px 5px 15px 0;
     font-size: 15px;
     font-weight: bold;
     cursor: pointer;
@@ -87,20 +87,47 @@ button, input[type="submit"], input[type="button"] {
     background-color: #f0f0f0;
     color: #e63946;
     box-shadow: none;
+    transform: translateY(-5px);
 }
 
-/*Description of front page*/
-.description{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-weight: 800;
+/*Front page description*/
+.description {
     margin-top: 100px;
-    margin-bottom: 400px;
+    margin-bottom: 180px;
+    max-width: 600px;
 }
 
+.description h1 {
+    font-size: 42px;
+    font-weight: 800;
+    margin-bottom: 15px;
+    line-height: 1.2;
+    padding-left: 30%;
+}
+
+.description p {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    padding-left: 40%;
+}
+
+.description button {
+    color: #ffffff;
+    border: 2px solid #000000;
+    padding: 12px 28px;
+    font-size: 16px;
+    border-radius: 30px;
+    padding-left: 5%;
+}
+
+.description button:hover {
+    background-color: #ffffff;
+    color: #e63946;
+    box-shadow: none;
+    transform: translateY(-5px);
+}
 
 /* license centralization */
 .bottom_license {
@@ -110,4 +137,6 @@ button, input[type="submit"], input[type="button"] {
     align-items: center;
     text-align: center;
     margin-top: 10px;
+    padding-left: 5%;
+    padding-right: 5%;
 }
