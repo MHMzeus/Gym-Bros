@@ -1,0 +1,142 @@
+/*Üldine lehe paigutus*/
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color:#ffffff;
+    color:#1a1a1a;
+    margin: 0;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.1;
+}
+
+/* Ühine logo ja menüü jaotamine kahele poole */
+.peamine-pais {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+/*Pilt/Logo*/
+.logo-ala {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-ala img {
+    max-width: 100px;
+    height: auto;
+    margin-bottom: 2px;
+}
+
+.logo-ala {
+    color: #000000;
+    font-size: 16px;
+    margin: 0;
+    font-weight: 700;
+}
+
+/* Menüü paigutus*/
+.menu-ala {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+/* Menüü nupud */
+.menu-ala button, .menu-ala input[type="button"] {
+    background-color: transparent;
+    border: none;
+    padding: 8px 20px;
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+    color: #1a1a1a;
+    border-radius: 25px;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+/* Fitness Mavericks */
+.logo-ala h5 {
+    color:#000000;
+    font-size: 13px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+/* Nupud ja navigatsioon */
+button, input[type="submit"], input[type="button"] {
+    background-color: #ffffff;
+    color: #000000;
+    border: 2px solid #000000;
+    padding: 10px 20px;
+    margin: 5px 5px 15px 0;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+/*Nupu hover efekt*/
+.menu-ala button:hover, .menu-ala input[type="button"]:hover{
+    background-color: #f0f0f0;
+    color: #e63946;
+    box-shadow: none;
+    transform: translateY(-5px);
+}
+
+/*Front page description*/
+.description {
+    margin-top: 100px;
+    margin-bottom: 180px;
+    max-width: 600px;
+}
+
+.description h1 {
+    font-size: 42px;
+    font-weight: 800;
+    margin-bottom: 15px;
+    line-height: 1.2;
+    padding-left: 30%;
+}
+
+.description p {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    padding-left: 40%;
+}
+
+.description button {
+    color: #ffffff;
+    border: 2px solid #000000;
+    padding: 12px 28px;
+    font-size: 16px;
+    border-radius: 30px;
+    padding-left: 5%;
+}
+
+.description button:hover {
+    background-color: #ffffff;
+    color: #e63946;
+    box-shadow: none;
+    transform: translateY(-5px);
+}
+
+/* license centralization */
+.bottom_license {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 10px;
+    padding-left: 5%;
+    padding-right: 5%;
+}
