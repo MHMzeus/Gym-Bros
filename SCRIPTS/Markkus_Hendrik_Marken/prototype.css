@@ -65,7 +65,7 @@ body {
     margin-bottom: 2px;
 }
 
-.logo-ala h5 {
+.logo-ala p {
     color: var(--text-color);
     font-size: 16px;
     margin: 0;
@@ -125,8 +125,9 @@ body {
     width: 45px;
 }
 
+/* Button */
 /* Menüü nupud */
-.menu-ala button {
+.btn {
     background-color: var(--button-color);
     color: var(--secondary-text);
     border: 2px solid #1a1a1a;
@@ -140,14 +141,14 @@ body {
 }
 
 /*Nupu hover efekt*/
-.menu-ala button:hover {
+.btn:hover {
     background-color: #f0f0f0;
     color: var(--hover-color);
     box-shadow: var(--box-shadow);
     transform: translateY(-5px);
 }
 
-.menu-ala button:active {
+.btn:active {
     transform: translateY(-1px);
 }
 

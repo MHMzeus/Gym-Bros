@@ -65,7 +65,7 @@ body {
     margin-bottom: 2px;
 }
 
-.logo-ala h5 {
+.logo-ala p {
     color: var(--text-color);
     font-size: 16px;
     margin: 0;
@@ -125,7 +125,8 @@ body {
 }
 
 /* Menüü nupud */
-.menu-ala button {
+.btn {
+    text-decoration: none;
     background-color: var(--button-color);
     color: var(--secondary-text);
     border: 2px solid #1a1a1a;
@@ -139,14 +140,14 @@ body {
 }
 
 /*Nupu hover efekt*/
-.menu-ala button:hover {
+.btn:hover {
     background-color: #f0f0f0;
     color: var(--hover-color);
     box-shadow: var(--box-shadow);
     transform: translateY(-5px);
 }
 
-.menu-ala button:active {
+.btn:active {
     transform: translateY(-1px);
 }
 
@@ -200,7 +201,9 @@ body {
     margin-left: 0%;
 }
 
-.description button {
+.description a {
+    text-decoration: none;
+    display: inline-block;
     background-color: var(--button-color);
     color: var(--secondary-text);
     border: 2px solid #1a1a1a;
@@ -213,14 +216,15 @@ body {
     transition: var(--transform);
 }
 
-.description button:hover {
+
+.description a:hover {
     background-color: #ffffff;
     color: var(--hover-color);
     box-shadow: var(--box-shadow);
     transform: translateY(-5px);
 }
 
-.description button:active {
+.description a:active {
     transform: translateY(-1px);
 }
 /* license centralization */
