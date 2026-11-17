@@ -1,101 +1,234 @@
+:root {
+    --page-color:#0c0808;
+    --text-color: #ffe3e3;
+    --secondary-text: #030202;
+    --button-color: #a8daf7;
+    --border-color: #a199f3;
+    --hover-color: #607dff;
+    --transform: 0.4s;
+    --box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4), inset 0px -5px 15px rgba(255, 255, 255, 0.4);
+    --light-page-color:#f5f5f5;
+    --light-text-color: #1a1a1a;
+    --light-secondary-text: #ffffff;
+    --light-button-color: #1a1a1a;
+    --light-border-color: #f39999;
+    --light-hover-color: #e63946;
+    --light-box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+:root:has(.input-mode:checked) {
+    --page-color: var(--light-page-color);
+    --text-color: var(--light-text-color);
+    --secondary-text: var(--light-secondary-text);
+    --button-color: var(--light-button-color);
+    --border-color: var(--light-border-color);
+    --box-shadow: var(--light-box-shadow);
+    --hover-color: var(--light-hover-color);
+}
+
+hr {
+    border: none;
+    height: 5px;
+    width: 100%;
+    margin: 4;
+    background: linear-gradient(to right, transparent, var(--border-color), transparent);
+}
+
 /*Üldine lehe paigutus*/
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color:#ffffff;
-    color:#1a1a1a;
-    margin: 0;
-    padding: 40px;
-    max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
-    line-height: 1.6;
+    line-height: 1.1;
+    background-color: var(--page-color);
+    transition: var(--transform), color var(--transform);
 }
 
-/* Ühine päis logo ja menüü jaoks*/
+/* Ühine logo ja menüü jaotamine kahele poole */
 .peamine-pais {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px; 
-    padding-bottom: 10px;
-    border-bottom: 1px solid #eaeaea;
+    align-items: flex-start;
+    margin-left: 5%;
 }
 
 /*Pilt/Logo*/
 .logo-ala {
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
     align-items: center;
 }
 
 .logo-ala img {
-    max-width: 80px;
+    max-width: 100px;
     height: auto;
-    margin-bottom: 5px;
+    margin-bottom: 2px;
 }
 
 .logo-ala h5 {
-    color: #000000;
-    font-size: 13px;
+    color: var(--text-color);
+    font-size: 16px;
     margin: 0;
     font-weight: 700;
 }
 
-/* Menüü paigutus vaskule üles nurka reana */
+/* Menüü paigutus*/
 .menu-ala {
-    display: flex;
+    display: inline-flex;
     flex-wrap: wrap;
-    gap: 15px;
-    justify-content: flex-end;
+    gap: 10px;
+    margin-right: 20px;
+}
+
+/* Dark mode toggle */
+.toggle-mode {
+    width: 104px;
+    height: 48px;
+    position: relative;
+    display: block;
+    background: #a8daf7;
+    border-radius: 200px;
+    box-shadow: var(--box-shadow);
+    transition: var(--transform);
+}
+
+.toggle-mode:after {
+    content: "";
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    background: linear-gradient(180deg, #9d9aff, #000000);
+    border-radius: 180px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    transition: var(--transform);
+}
+
+.input-mode {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+
+}
+.input-mode:checked + .toggle-mode {
+    background: #0c0808;
+}
+.input-mode:checked + .toggle-mode:after {
+    left: 99px;
+    transform: translate(-100%);
+    background: linear-gradient(180deg, #b6a3a3, #ddd7d7);
+}
+.toggle-mode:active:after{
+    width: 45px;
 }
 
 /* Menüü nupud */
-.menu-ala button, .menu-ala input[type="button"] {
-    background-color: transparent;
-    border: none;
-    padding: 8px 12px;
-    margin: 0;
-    font-size: 16px;
-    font-weight: 600;
-    color: #1a1a1a;
-    border-radius: 4px;
-    transition: color 0.3s, background-color 0.3s;
-}
-
-/* Fitness Mavericks */
-.logo-ala h5 {
-    color:#000000;
-    font-size: 13px;
-    margin-top: 10px;
-    margin-bottom: 40px;
-}
-/*Pealkirjad*/
-h1, h2, h3, b, strong {
-    color: #000000;
-    font-weight: 1000;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-/* Nupud ja navigatsioon */
-button, input[type="submit"], input[type="button"] {
-    background-color: #ffffff;
-    color: #000000;
-    border: 2px solid #000000;
-    padding: 10px 20px;
-    margin:5px 5px 15px 0;
-    font-size: 15px;
-    font-weight: bold;
+.menu-ala button {
+    background-color: var(--button-color);
+    color: var(--secondary-text);
+    border: 2px solid #1a1a1a;
     cursor: pointer;
-    border-radius: 6px;
-    transition: all 0.3s ease;
+    padding: 14px 25px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 30px;
+    box-shadow: var(--box-shadow);
+    transition: var(--transform);
 }
 
 /*Nupu hover efekt*/
-.menu-ala button:hover, .menu-ala input[type="button"]:hover{
+.menu-ala button:hover {
     background-color: #f0f0f0;
-    color: #e63946;
-    box-shadow: none;
+    color: var(--hover-color);
+    box-shadow: var(--box-shadow);
+    transform: translateY(-5px);
 }
 
+.menu-ala button:active {
+    transform: translateY(-1px);
+}
 
+/*Aligning the image with the text*/
+.section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 80px 8%;
+    gap: 50px;
+}
+
+.image {
+    flex: 1;
+    display: inline-flex;
+    justify-content: center;
+}
+
+.image img {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    margin-left: 300px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15); 
+    object-fit: cover;
+}
+
+/*Front page description*/
+.description {
+    display: inline-flex;
+    flex-direction: column;
+    margin-top: 100px;
+    margin-bottom: 180px;
+    color: var(--text-color);
+}
+
+.description h1 {
+    font-size: 42px;
+    font-weight: 800;
+    margin-bottom: 15px;
+    line-height: 1.2;
+    margin-left: 0%;
+}
+
+.description p {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    margin-left: 0%;
+}
+
+.description button {
+    background-color: var(--button-color);
+    color: var(--secondary-text);
+    border: 2px solid #1a1a1a;
+    cursor: pointer;
+    padding: 14px 34px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 30px;
+    box-shadow: var(--box-shadow);
+    transition: var(--transform);
+}
+
+.description button:hover {
+    background-color: #ffffff;
+    color: var(--hover-color);
+    box-shadow: var(--box-shadow);
+    transform: translateY(-5px);
+}
+
+.description button:active {
+    transform: translateY(-1px);
+}
+/* license centralization */
+.bottom_license {
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 60px;
+}

@@ -23,7 +23,7 @@
     --button-color: var(--light-button-color);
     --border-color: var(--light-border-color);
     --box-shadow: var(--light-box-shadow);
-    --hover-color: var(--light-hover-color)
+    --hover-color: var(--light-hover-color);
 }
 
 hr {
@@ -88,9 +88,9 @@ body {
     display: block;
     background: #a8daf7;
     border-radius: 200px;
-    box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4), inset 0px -5px 15px rgba(255, 255, 255, 0.4);
+    box-shadow: var(--box-shadow);
     cursor: pointer;
-    transition: var(--transform)
+    transition: var(--transform);
 }
 
 .toggle-mode:after {
@@ -103,7 +103,7 @@ body {
     background: linear-gradient(180deg, #9d9aff, #000000);
     border-radius: 180px;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
-    transition: var(--transform)
+    transition: var(--transform);
 }
 
 .input-mode {
@@ -135,7 +135,7 @@ body {
     font-weight: 700;
     border-radius: 30px;
     box-shadow: var(--box-shadow);
-    transition: var(--transform)
+    transition: var(--transform);
 }
 
 /*Nupu hover efekt*/
@@ -150,79 +150,6 @@ body {
     transform: translateY(-1px);
 }
 
-/*Aligning the image with the text*/
-.section {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 80px 8%;
-    gap: 50px;
-}
-
-.image {
-    flex: 1;
-    display: inline-flex;
-    justify-content: center;
-}
-
-.image img {
-    width: 100%;
-    max-width: 700px;
-    height: auto;
-    margin-left: 300px;
-    border-radius: 20px;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15); 
-    object-fit: cover;
-}
-
-/*Front page description*/
-.description {
-    display: inline-flex;
-    flex-direction: column;
-    margin-top: 100px;
-    margin-bottom: 180px;
-    color: var(--text-color);
-}
-
-.description h1 {
-    font-size: 42px;
-    font-weight: 800;
-    margin-bottom: 15px;
-    line-height: 1.2;
-    margin-left: 0%;
-}
-
-.description p {
-    font-size: 18px;
-    font-weight: 600;
-    line-height: 1.6;
-    margin-bottom: 25px;
-    margin-left: 0%;
-}
-
-.description button {
-    background-color: var(--button-color);
-    color: var(--secondary-text);
-    border: 2px solid #1a1a1a;
-    cursor: pointer;
-    padding: 14px 34px;
-    font-size: 16px;
-    font-weight: 700;
-    border-radius: 30px;
-    box-shadow: var(--box-shadow);
-    transition: var(--transform)
-}
-
-.description button:hover {
-    background-color: #ffffff;
-    color: var(--hover-color);
-    box-shadow: var(--box-shadow);
-    transform: translateY(-5px);
-}
-
-.description button:active {
-    transform: translateY(-1px);
-}
 /* license centralization */
 .bottom_license {
     color: var(--text-color);
