@@ -86,7 +86,7 @@ body {
     height: 48px;
     position: relative;
     display: block;
-    background: #11171b;
+    background: #a8daf7;
     border-radius: 200px;
     box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4), inset 0px -5px 15px rgba(255, 255, 255, 0.4);
     cursor: pointer;
@@ -100,7 +100,7 @@ body {
     position: absolute;
     top: 4px;
     left: 4px;
-    background: linear-gradient(180deg, #777, #3a3a3a);
+    background: linear-gradient(180deg, #9d9aff, #000000);
     border-radius: 180px;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
     transition: var(--transform)
@@ -113,12 +113,12 @@ body {
 
 }
 .input-mode:checked + .toggle-mode {
-    background: #dad8d8;
+    background: #0c0808;
 }
 .input-mode:checked + .toggle-mode:after {
     left: 99px;
     transform: translate(-100%);
-    background: linear-gradient(180deg, #ffcc89, #d8860b);
+    background: linear-gradient(180deg, #b6a3a3, #ddd7d7);
 }
 .toggle-mode:active:after{
     width: 45px;
