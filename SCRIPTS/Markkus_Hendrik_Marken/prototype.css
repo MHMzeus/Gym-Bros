@@ -1,19 +1,30 @@
 :root {
-    --page-color:#f5f5f5;
-    --text-color: #1a1a1a;
-    --secondary-text: #ffffff;
-    --button-color: #1a1a1a;
-    --border-color: #f39999;
+    --page-color:#0c0808;
+    --text-color: #ffe3e3;
+    --secondary-text: #030202;
+    --button-color: #a8daf7;
+    --border-color: #a199f3;
+    --hover-color: #607dff;
+    --transform: 0.4s;
+    --box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4), inset 0px -5px 15px rgba(255, 255, 255, 0.4);
+    --light-page-color:#f5f5f5;
+    --light-text-color: #1a1a1a;
+    --light-secondary-text: #ffffff;
+    --light-button-color: #1a1a1a;
+    --light-border-color: #f39999;
+    --light-hover-color: #e63946;
+    --light-box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* :root {
-    --page-color:#f5f5f5;
-    --text-color: #1a1a1a;
-    --secondary-text: #ffffff;
-    --button-color: #1a1a1a;
-    --border-color: #f39999;
+:root:has(.input-mode:checked) {
+    --page-color: var(--light-page-color);
+    --text-color: var(--light-text-color);
+    --secondary-text: var(--light-secondary-text);
+    --button-color: var(--light-button-color);
+    --border-color: var(--light-border-color);
+    --box-shadow: var(--light-box-shadow);
+    --hover-color: var(--light-hover-color)
 }
-*/
 
 hr {
     border: none;
@@ -30,6 +41,7 @@ body {
     margin-right: auto;
     line-height: 1.1;
     background-color: var(--page-color);
+    transition: var(--transform), color var(--transform);
 }
 
 /* Ühine logo ja menüü jaotamine kahele poole */
@@ -68,6 +80,50 @@ body {
     margin-right: 20px;
 }
 
+/* Dark mode toggle */
+.toggle-mode {
+    width: 104px;
+    height: 48px;
+    position: relative;
+    display: block;
+    background: #11171b;
+    border-radius: 200px;
+    box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4), inset 0px -5px 15px rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    transition: var(--transform)
+}
+
+.toggle-mode:after {
+    content: "";
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    background: linear-gradient(180deg, #777, #3a3a3a);
+    border-radius: 180px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    transition: var(--transform)
+}
+
+.input-mode {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+
+}
+.input-mode:checked + .toggle-mode {
+    background: #dad8d8;
+}
+.input-mode:checked + .toggle-mode:after {
+    left: 99px;
+    transform: translate(-100%);
+    background: linear-gradient(180deg, #ffcc89, #d8860b);
+}
+.toggle-mode:active:after{
+    width: 45px;
+}
+
 /* Menüü nupud */
 .menu-ala button {
     background-color: var(--button-color);
@@ -78,15 +134,15 @@ body {
     font-size: 16px;
     font-weight: 700;
     border-radius: 30px;
-    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s;
+    box-shadow: var(--box-shadow);
+    transition: var(--transform)
 }
 
 /*Nupu hover efekt*/
 .menu-ala button:hover {
     background-color: #f0f0f0;
-    color: #e63946;
-    box-shadow: none;
+    color: var(--hover-color);
+    box-shadow: var(--box-shadow);
     transform: translateY(-5px);
 }
 
@@ -111,8 +167,9 @@ body {
 
 .image img {
     width: 100%;
-    max-width: 500px;
+    max-width: 700px;
     height: auto;
+    margin-left: 300px;
     border-radius: 20px;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15); 
     object-fit: cover;
@@ -152,14 +209,14 @@ body {
     font-size: 16px;
     font-weight: 700;
     border-radius: 30px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-    transition: all 0.3s ease;
+    box-shadow: var(--box-shadow);
+    transition: var(--transform)
 }
 
 .description button:hover {
     background-color: #ffffff;
-    color: #e63946;
-    box-shadow: none;
+    color: var(--hover-color);
+    box-shadow: var(--box-shadow);
     transform: translateY(-5px);
 }
 
