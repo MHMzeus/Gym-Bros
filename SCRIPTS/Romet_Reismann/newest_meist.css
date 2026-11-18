@@ -9,6 +9,7 @@
     --transform: 0.4s;
     --box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4), inset 0px -5px 15px rgba(255, 255, 255, 0.4);
     --light-page-color:#f5f5f5;
+    --light-card-bg: #ffffff;
     --light-text-color: #1a1a1a;
     --light-secondary-text: #ffffff;
     --light-button-color: #1a1a1a;
@@ -19,7 +20,7 @@
 
 :root:has(.input-mode:checked) {
     --page-color: var(--light-page-color);
-    --card-bg: #ffffff;
+    --light-card-bg: var(--light-card-bg);
     --text-color: var(--light-text-color);
     --secondary-text: var(--light-secondary-text);
     --button-color: var(--light-button-color);
@@ -249,7 +250,7 @@ body {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.8px;
-    color: var(--team-text-color);
+    color: var();
     margin: 0 0 18px 0;
 }
 
