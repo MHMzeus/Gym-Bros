@@ -131,6 +131,7 @@ body {
 /* Menüü nupud */
 .btn {
     background-color: var(--button-color);
+    text-decoration: none;
     color: var(--secondary-text);
     border: 2px solid #1a1a1a;
     cursor: pointer;
