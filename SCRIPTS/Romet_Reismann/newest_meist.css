@@ -26,6 +26,7 @@
     --border-color: var(--light-border-color);
     --box-shadow: var(--light-box-shadow);
     --hover-color: var(--light-hover-color);
+    --team-text-color: var(--light-hover-color)
 }
 
 hr {
@@ -248,7 +249,7 @@ body {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.8px;
-    color: #e63946;
+    color: var(--team-text-color);
     margin: 0 0 18px 0;
 }
 
