@@ -20,7 +20,7 @@
 
 :root:has(.input-mode:checked) {
     --page-color: var(--light-page-color);
-    --light-card-bg: var(--light-card-bg);
+    --card-bg: var(--light-card-bg);
     --text-color: var(--light-text-color);
     --secondary-text: var(--light-secondary-text);
     --button-color: var(--light-button-color);
