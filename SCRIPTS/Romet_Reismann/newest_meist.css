@@ -203,6 +203,95 @@ body {
     border-color: var(--hover-color);
 }
 
+.tiimi-ala dd {
+    margin: 0;
+}
+
+/* Ümmargune Pildiraam */
+.pildi-kast {
+    margin-bottom: 18px;
+}
+
+.pildi-kast img {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--border-color);
+    background-color: #ffffff;
+    display: block;
+    transition: border-color var(--border-color);
+}
+
+.tiimi-ala:hover .pildi-kast img {
+    border-color: var(--hover-color);
+}
+
+/* Tekstide paigutus kaardi ees */
+.kaardi-sisu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+    width: 100%;
+}
+
+.liikme-nimi {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-color);
+    margin: 0 0 6px 0;
+}
+
+.liikme-roll {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: #e63946;
+    margin: 0 0 18px 0;
+}
+
+.sisu-pealkiri {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    color: var(--text-color);
+    opacity: 0.6;
+    margin-top: 8px;
+    margin-bottom: 4px;
+}
+
+.liikme-kirjeldus {
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--text-color);
+    margin-bottom: 16px;
+}
+
+/* Portfoolio nupp kaardi allosas */
+.liikme-portfoolio {
+    margin-top: auto;
+    padding-top: 12px;
+}
+
+.liikme-portfoolio a {
+    display: inline-block;
+    padding: 8px 20px;
+    border-radius: 20px;
+    background-color: var(--button-color);
+    color: var(--secondary-text);
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    transform: var(--transform);
+}
+
+.liikme-portfoolio a:hover {
+    background-color: var(--hover-color);
+    color: #ffffff
+}
 
 /* license centralization */
 .bottom_license {
