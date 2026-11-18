@@ -41,6 +41,7 @@ body {
     margin-right: auto;
     line-height: 1.1;
     background-color: var(--page-color);
+    color: var(--text-color);
     transition: var(--transform), color var(--transform);
 }
 
@@ -235,6 +236,46 @@ body {
 
 .liikme-portfoolio a:hover {
     color: #e63946;
+}
+
+/* Sisestusvorm kahe joone vahel */
+.vormi-ala {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 35px auto;
+    padding: 25px;
+    gap: 12px;
+    border: 2px solid var(--border-color);
+    border-radius: 12px;
+    box-shadow: var(--box-shadow);
+    color: var(--text-color);
+}
+
+.vormi-ala h2 {
+    margin-top: 0;
+    font-size: 20px;
+    text-align: center;
+}
+
+.vormi-ala label {
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.vormi-ala input {
+    padding: 10px 14px;
+    font-size: 15px;
+    border-radius: 8px;
+    border: 2px solid var(--border-color);
+    background-color: var(--page-color);
+    color: var(--text-color);
+    transition: var(--transform);
+}
+
+.vormi-ala input:focus {
+    outline: none;
+    border-color: var(--hover-color);
 }
 
 /* license centralization */
