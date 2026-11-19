@@ -251,7 +251,7 @@ body {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.8px;
-    color: var();
+    color: var(--hover-color);
     margin: 0 0 18px 0;
 }
 
