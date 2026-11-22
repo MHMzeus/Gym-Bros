@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="Meist_page.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link id="favicon" rel="icon" href="/SCRIPTS/Markkus_Hendrik_Marken/Icon/Fitness_Mavericks.png">
+    <link id="favicon" rel="icon" href="/Almost_finalized_pages/Logo/Fitness_Mavericks.png">
     <title>Fitness Mavericks</title>
 
 </head>
@@ -12,37 +12,21 @@
 
 <header class="peamine-pais">
     <div class="logo-ala">
-        <img src="/SCRIPTS/Markkus_Hendrik_Marken/Icon/Fitness_Mavericks_Valge.png" alt="Fitness Mavericks Icon">
+        <img href="Maverick_Front_Page.html" src="/Almost_finalized_pages/Logo/Fitness_Mavericks_Valge.png" alt="Fitness Mavericks Icon">
         <a href="Maverick_Front_Page.html">Fitness Mavericks</a>
     </div>
 
-
     <nav class="menu-ala">
+        <audio src="/Almost_finalized_pages/Audio/Cut_Button_Audio.mp3" id="mavAudio" preload="auto"></audio>
         <input class="input-mode" type="checkbox" id="darkmode-toggle">
         <label class="toggle-mode" for="darkmode-toggle"></label>
         <div class="background-shift"></div>
-        <a href="" class="btn">Keha Trenn</a>
-        <a href="" class="btn">Mida Saavutad?</a>
-        <a href="Maverick_meist.html" class="btn">Meist</a>
-        <a href="Maverick_kontaktid.html" class="btn">Kontaktid</a>
+        <a href="" class="btn" onclick="playMavAudio()">Keha Trenn</a>
+        <a href="" class="btn" onclick="playMavAudio()">Mida Saavutad?</a>
+        <a href="Maverick_meist.html" class="btn" onclick="playMavAudio()">Meist</a>
+        <a href="Maverick_kontaktid.html" class="btn" onclick="playMavAudio()">Kontaktid</a>
     </nav>
 </header>
-
-<!--Logo dark mode changer-->
-<script>
-    const Toggle = document.querySelector('.input-mode');
-    const mavImage = document.querySelector('.logo-ala img');
-
-    Toggle.addEventListener('change', () => {
-        const Dark = Toggle.checked;
-
-    if (mavImage) {
-        mavImage.src = Dark ? '/SCRIPTS/Markkus_Hendrik_Marken/Icon/Fitness_Mavericks.png' : '/SCRIPTS/Markkus_Hendrik_Marken/Icon/Fitness_Mavericks_Valge.png'
-
-    }
-    });
-</script>
-
 <hr>
 
 <!--Header ja paragraph-->
@@ -57,7 +41,7 @@
     <dl class="tiimi-ala">
         <div class="pildi-kast">
             <!-- Lisa siia liikme pilt -->
-            <img src="/SCRIPTS/Markkus_Hendrik_Marken/Liikmete_Fotod/Filler.webp" alt="Foto" width="100px">
+            <img src="/Almost_finalized_pages/Images/Icon.webp" alt="Foto" width="100px">
         </div>
         <div class="kaardi-sisu">
             <dt class="liikme-nimi">Romet</dt>
@@ -75,7 +59,7 @@
     <dl class="tiimi-ala">
         <div class="pildi-kast">
             <!-- Lisa siia liikme pilt -->
-            <img src="/SCRIPTS/Markkus_Hendrik_Marken/Liikmete_Fotod/Filler.webp" alt="Foto" width="100px">
+            <img src="/Almost_finalized_pages/Images/Icon.webp" alt="Foto" width="100px">
         </div>
         <div class="kaardi-sisu">
             <dt class="liikme-nimi">Markkus</dt>
@@ -93,7 +77,7 @@
     <dl class="tiimi-ala">
         <div class="pildi-kast">
             <!-- Lisa siia liikme pilt -->
-            <img src="/SCRIPTS/Markkus_Hendrik_Marken/Liikmete_Fotod/Filler.webp" alt="Foto" width="100px">
+            <img src="/Almost_finalized_pages/Images/Icon.webp" alt="Foto" width="100px">
         </div>
         <div class="kaardi-sisu">
             <dt class="liikme-nimi">David</dt>
@@ -117,6 +101,45 @@
 
 <p>&copy; 2026 Fitness Mavericks</p>
 </div>
+
+<!--Logo dark mode changer-->
+<script>
+    const Toggle = document.querySelector('.input-mode');
+    const mavImage = document.querySelector('.logo-ala img');
+
+    Toggle.addEventListener('change', () => {
+        const Dark = Toggle.checked;
+
+    if (mavImage) {
+        mavImage.src = Dark ? '/Almost_finalized_pages/Logo/Fitness_Mavericks.png' : '/Almost_finalized_pages/Logo/Fitness_Mavericks_Valge.png'
+
+    }
+    });
+</script>
+
+<script>
+    const mavButton = document.getElementById("mavAudio");
+    
+    function playMavAudio() {
+        mavButton.play();
+    }
+
+    //link configuration
+    const buttonLinks = document.querySelectorAll("a[href]");
+    const delay = 100; //millisekundid
+    
+    mavButton.addEventListener("canplaythrough", () => {
+        buttonLinks.forEach(btn => {
+            btn.addEventListener("click", (e) => {
+                e.preventDefault(); // Prevent immediate navigation
+                const href = btn.getAttribute("href");
+                setTimeout(() => {
+                    window.location = href;
+                }, mavButton.duration * 1000 + delay);
+            })
+        })
+    })
+</script>
 
 </body>
 </html>
