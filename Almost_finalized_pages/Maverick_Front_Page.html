@@ -17,7 +17,7 @@
     </div>
 
     <nav class="menu-ala">
-        <audio src="/Almost_finalized_pages/Audio/Cut_Button_Audio.mp3" id="mavAudio" preload="auto"></audio>
+        <audio src="/Almost_finalized_pages/Audio/Button_Sound_Effect.mp3" id="mavAudio" preload="auto"></audio>
         <input class="input-mode" type="checkbox" id="darkmode-toggle">
         <label class="toggle-mode" for="darkmode-toggle"></label>
         <div class="background-shift"></div>
@@ -75,7 +75,6 @@
 
     //link configuration
     const buttonLinks = document.querySelectorAll("a[href]");
-    const delay = 100; //millisekundid
     
     mavButton.addEventListener("canplaythrough", () => {
         buttonLinks.forEach(btn => {
@@ -84,7 +83,7 @@
                 const href = btn.getAttribute("href");
                 setTimeout(() => {
                     window.location = href;
-                }, mavButton.duration * 1000 + delay);
+                }, mavButton.duration * 650);
             })
         })
     })
