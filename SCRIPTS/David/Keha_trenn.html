@@ -7,26 +7,25 @@
     <link rel="stylesheet" href="test.css">
 </head>
 <body>
-    <header class="peamine-pais">
-        <nav>
-            <a href="kood.html">
-                <div class="logo-ala">
-                    <img src="images/Fitness_Mavericks.png" alt="Fitness Mavericks icon">
-                    <h5>Fitness Mavericks</h5>
-                </div>
+<header class="peamine-pais">
+    <div class="logo-ala">
+        <img src="images/Fitness_Mavericks.png" alt="Fitness Mavericks icon">
+        <a href="kood.html">Fitness Mavericks</a>
+    </div>
 
-<!--buttons-->
-
-<div>
-    <nav class="menu-ala">
-    <a href="team.html"><button>Meiest</button></a>
-    <a href="Keha_trenn.html"><button>Keha trenn</button></a>
-    <a href="Mida_saavutad.html"><button>Mida saavutad?</button></a>
-    <a href="Kontaktid.html"><button>Kontaktid</button></a>
+    <nav class="menu-ala" aria-label="Põhinavigatsioon">
+        <input class="input-mode" type="checkbox" id="darkmode-toggle">
+        <label class="toggle-mode" for="darkmode-toggle" aria-label="Vaheta tumedat ja heledat režiimi"></label>
+        <a href="Keha_trenn.html" class="btn">Keha trenn</a>
+        <a href="Maverick_mida_saavutad.html" class="btn">Mida saavutad?</a>
+        <a href="team.html" class="btn">Meist</a>
+        <a href="#" class="btn">Kontaktid</a>
     </nav>
-</div>
 </header>
-<main>
+
+<hr>
+
+<main class="content-ala">
     <h1>Keha trenn</h1>
     <p>
         Keharaskusega treenimine on mugav ja efektiivne võimalus arenguks 
@@ -106,20 +105,20 @@
     </p>
 </main>
 
-<footer>
-    <p>Fitness Mavericks - Õppeprojekt</p>
-</footer>
-
-<!--Seda osa pole vaja keha trenni lehel.
-<div>
-    <h2>Fillable form</h2>
-    <label for="gmail">gmail:</label>
-    <input type="text" id="gmail">
-    <br>
-    <label for="reason">reason</label>
-    <input type="text" id="reason">
+<div class="bottom_license">
+    <hr>
+    <p>&copy; 2026 Fitness Mavericks</p>
 </div>
--->
 
+<script>
+    const toggle = document.querySelector('.input-mode');
+    const mavImage = document.querySelector('.logo-ala img');
+
+    toggle.addEventListener('change', () => {
+        mavImage.src = toggle.checked
+            ? 'images/Fitness_Mavericks.png'
+            : 'images/Fitness_Mavericks.png';
+    });
+</script>
 </body>
 </html>
