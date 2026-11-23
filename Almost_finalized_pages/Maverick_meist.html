@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="Meist_page.css">
+    <link rel="stylesheet" href="/Almost_finalized_pages/CSS/Meist_page.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link id="favicon" rel="icon" href="/Almost_finalized_pages/Logo/Fitness_Mavericks.png">
@@ -11,20 +11,26 @@
 <body>
 
 <header class="peamine-pais">
+
+    <!--Audio elemendid-->
+    <audio src="/Almost_finalized_pages/Audio/Button_Sound_Effect.mp3" id="mavAudio1" preload="auto"></audio>
+    <audio src="/Almost_finalized_pages/Audio/Main_Page.mp3" id="mavAudio2" preload="auto"></audio>
+    <audio src="/Almost_finalized_pages/Audio/Shift_SFX.mp3" id="mavAudio3" preload="auto"></audio>
+    <audio src="/Almost_finalized_pages/Audio/Cut_Button_Audio.mp3" id="mavAudio4" preload="auto"></audio>
+
     <div class="logo-ala">
-        <img href="Maverick_Front_Page.html" src="/Almost_finalized_pages/Logo/Fitness_Mavericks_Valge.png" alt="Fitness Mavericks Icon">
-        <a href="Maverick_Front_Page.html">Fitness Mavericks</a>
+        <img src="/Almost_finalized_pages/Logo/Fitness_Mavericks_Valge.png" alt="Fitness Mavericks Icon">
+        <a href="Maverick_Front_Page.html" onclick="playMavAudio('mavAudio2')">Fitness Mavericks</a>
     </div>
 
     <nav class="menu-ala">
-        <audio src="/Almost_finalized_pages/Audio/Button_Sound_Effect.mp3" id="mavAudio" preload="auto"></audio>
-        <input class="input-mode" type="checkbox" id="darkmode-toggle">
+        <input class="input-mode" type="checkbox" id="darkmode-toggle" onclick="playMavAudio('mavAudio3')">
         <label class="toggle-mode" for="darkmode-toggle"></label>
         <div class="background-shift"></div>
-        <a href="" class="btn" onclick="playMavAudio()">Keha Trenn</a>
-        <a href="" class="btn" onclick="playMavAudio()">Mida Saavutad?</a>
-        <a href="Maverick_meist.html" class="btn" onclick="playMavAudio()">Meist</a>
-        <a href="Maverick_kontaktid.html" class="btn" onclick="playMavAudio()">Kontaktid</a>
+        <a href="" class="btn" onclick="playMavAudio('mavAudio1')">Keha Trenn</a>
+        <a href="" class="btn" onclick="playMavAudio('mavAudio1')">Mida Saavutad?</a>
+        <a href="Maverick_meist.html" class="btn" onclick="playMavAudio('mavAudio1')">Meist</a>
+        <a href="Maverick_kontaktid.html" class="btn" onclick="playMavAudio('mavAudio1')">Kontaktid</a>
     </nav>
 </header>
 <hr>
@@ -38,58 +44,58 @@
 <!-- 3 tiimiliikme kaarti ühes reas -->
 <div class="description-ala">
     <!-- 1. LIIKME KAART: ROMET-->
-    <dl class="tiimi-ala">
+    <div class="tiimi-ala">
         <div class="pildi-kast">
             <!-- Lisa siia liikme pilt -->
-            <img src="/Almost_finalized_pages/Images/Icon.webp" alt="Foto" width="100px">
+            <img src="/Almost_finalized_pages/Images/MHM.png" alt="Foto" width="100px">
         </div>
         <div class="kaardi-sisu">
-            <dt class="liikme-nimi">Romet</dt>
-            <dd class="liikme-roll">Roll tiimis</dd>
+            <p class="liikme-nimi">Markkus Hendrik Marken</p>
+            <p class="liikme-roll">Project Manager</p>
         
-            <dt class="sisu-pealkiri">Kirjeldus</dt>
-            <dd class="liikme-kirjeldus">Juhatab lahti enda osa ja tegevusvaldkonna.</dd>
+            <p class="sisu-pealkiri">Kirjeldus</p>
+            <p class="liikme-kirjeldus">Olin selle veebilehe projekti juht. Ma kontrollisin vigu, kirjutasin lehtedele toimivaid skripte, Lihvisin CSS värvi spektrumit ja juhendasin meeskonnaliikmeid.</p>
 
-            <dt class="sisu-pealkiri">Portfoolio</dt>
-            <dd class="liikme-portfoolio"><a href="#">Vaata portfooliot</a></dd>
+            <p class="sisu-pealkiri">Portfoolio</p>
+            <a class="liikme-portfoolio" href="https://www.linkedin.com/in/markkus-hendrik-marken-917a74451/" target="_blank" onclick="playMavAudio('mavAudio4')">Vaata portfooliot</a>
         </div>
-    </dl>
+    </div>
 
     <!-- 2. LIIKME KAART: Markkus-->
-    <dl class="tiimi-ala">
+    <div class="tiimi-ala">
         <div class="pildi-kast">
             <!-- Lisa siia liikme pilt -->
             <img src="/Almost_finalized_pages/Images/Icon.webp" alt="Foto" width="100px">
         </div>
         <div class="kaardi-sisu">
-            <dt class="liikme-nimi">Markkus</dt>
-            <dd class="liikme-roll">Roll tiimis</dd>
+            <p class="liikme-nimi">Romet</p>
+            <p class="liikme-roll">Roll tiimis</p>
         
-            <dt class="sisu-pealkiri">Kirjeldus</dt>
-            <dd class="liikme-kirjeldus">Juhatab lahti enda osa ja tegevusvaldkonna.</dd>
+            <p class="sisu-pealkiri">Kirjeldus</p>
+            <p class="liikme-kirjeldus">Juhatab lahti enda osa ja tegevusvaldkonna.</p>
 
-            <dt class="sisu-pealkiri">Portfoolio</dt>
-            <dd class="liikme-portfoolio"><a href="#">Vaata portfooliot</a></dd>
+            <p class="sisu-pealkiri">Portfoolio</p>
+            <a class="liikme-portfoolio" href="#" target="_blank" onclick="playMavAudio('mavAudio4')">Vaata portfooliot</a>
         </div>
-    </dl>
+    </div>
 
     <!-- 3. LIIKME KAART: David-->
-    <dl class="tiimi-ala">
+    <div class="tiimi-ala">
         <div class="pildi-kast">
             <!-- Lisa siia liikme pilt -->
             <img src="/Almost_finalized_pages/Images/Icon.webp" alt="Foto" width="100px">
         </div>
         <div class="kaardi-sisu">
-            <dt class="liikme-nimi">David</dt>
-            <dd class="liikme-roll">Roll tiimis</dd>
+            <p class="liikme-nimi">David</p>
+            <p class="liikme-roll">Roll tiimis</p>
         
-            <dt class="sisu-pealkiri">Kirjeldus</dt>
-            <dd class="liikme-kirjeldus">Juhatab lahti enda osa ja tegevusvaldkonna.</dd>
+            <p class="sisu-pealkiri">Kirjeldus</p>
+            <p class="liikme-kirjeldus">Juhatab lahti enda osa ja tegevusvaldkonna.</p>
 
-            <dt class="sisu-pealkiri">Portfoolio</dt>
-            <dd class="liikme-portfoolio"><a href="#">Vaata portfooliot</a></dd>
+            <p class="sisu-pealkiri">Portfoolio</p>
+            <a class="liikme-portfoolio" href="#" target="_blank" onclick="playMavAudio('mavAudio4')">Vaata portfooliot</a>
         </div>
-    </dl>
+    </div>
 
 </div>
 
@@ -118,10 +124,11 @@
 </script>
 
 <script>
-    const mavButton = document.getElementById("mavAudio");
+    var mavButton = document.getElementById("mavAudio1");
     
-    function playMavAudio() {
-        mavButton.play();
+    function playMavAudio(audioId) {
+        var mavButton = document.getElementById(audioId)
+        mavButton.play(audioId);
     }
 
     //link configuration
@@ -134,7 +141,7 @@
                 const href = btn.getAttribute("href");
                 setTimeout(() => {
                     window.location = href;
-                }, mavButton.duration * 750);
+                }, mavButton.duration * 650);
             })
         })
     })
