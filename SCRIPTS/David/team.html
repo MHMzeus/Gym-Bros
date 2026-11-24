@@ -3,65 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="/SCRIPTS/Markkus_Hendrik_Marken/Icon/Fitness_Mavericks.png">
+    <link rel="icon" href="images/Fitness_Mavericks.png">
     <title>Fitness Mavericks/Team</title>
     <link rel="stylesheet" href="test.css">
 </head>
 <body>
 <header class="peamine-pais">
-        <nav>
-            <a href="kood.html">
-                <div class="logo-ala">
-                    <img src="images/Fitness_Mavericks.png" alt="Fitness Mavericks icon">
-                    <h5>Fitness Mavericks</h5>
-                </div>
+    <div class="logo-ala">
+        <img src="images/Fitness_Mavericks.png" alt="Fitness Mavericks icon">
+        <a href="kood.html">Fitness Mavericks</a>
+    </div>
 
-<!--buttons-->
-
-<div>
-    <nav class="menu-ala">
-    <a href="team.html"><button>Meiest</button></a>
-    <a href="Keha_trenn.html"><button>Keha trenn</button></a>
-    <a href="Mida_saavutad.html"><button>Mida saavutad?</button></a>
-    <a href="Kontaktid.html"><button>Kontaktid</button></a>
+    <nav class="menu-ala" aria-label="Põhinavigatsioon">
+        <input class="input-mode" type="checkbox" id="darkmode-toggle">
+        <label class="toggle-mode" for="darkmode-toggle" aria-label="Vaheta tumedat ja heledat režiimi"></label>
+        <a href="Keha_trenn.html" class="btn">Keha trenn</a>
+        <a href="Maverick_mida_saavutad.html" class="btn">Mida saavutad?</a>
+        <a href="team.html" class="btn">Meist</a>
+        <a href="#" class="btn">Kontaktid</a>
     </nav>
-</div>
 </header>
 
-<!--Header ja paragraph-->
-<div>
-    <h2>Team</h2>
-    <p>Olen David Chiboshvili, Tartu Ülikooli tudeng. Olen gruusiast pärit ja elan praeguTartus.</p>
-    <p>Olen huvitatud programmeerimisest ja disainist.</p>
-    <p>2025 aastal olen võitnud Kood \ Jõhvi Häkatonil ja 2026 aastal sain 1. koha Tal Techi Arvutitehnika võistluses.</p>
-</div>
+<hr>
 
-<!--Description list, term and definition-->
-<div>
-    <dl style="background-color: rgb(237, 243, 243); border: 2px solid">
-        <img src="C:\Users\chiboshvili\Git-merge-conflict-test\Gym-Bros\SCRIPTS\David\images\David_pilt.jpg" alt="Foto" width="100px">
-        <dt>David Chiboshvili</dt>
-        <dt>UI Disainer</dt>
-        <dt>Logo Artist</dt>
-        <dt>HTML ja CSS koodija</dt>
-        <hr>
-        <dd> Juhatab lahti enda osa</dd>
-        <hr>
-        <dd>Portfoolio: <a href="https://github.com/davidson-python">GitHub</a></dd>
+<main>
+    <div class="sisu-ala">
+        <h1>Meie tiim</h1>
+        <p>Tutvu Fitness Mavericksi meeskonnaga.</p>
+    </div>
 
-    </dl>
-</div>
+    <div class="description-ala">
+        <dl class="tiimi-ala">
+            <div class="pildi-kast">
+                <img src="images/David_pilt.jpg" alt="David Chiboshvili">
+            </div>
+            <div class="kaardi-sisu">
+                <dt class="liikme-nimi">David Chiboshvili</dt>
+                <dd class="liikme-roll">UI-disainer ja logo artist</dd>
+                <dt class="sisu-pealkiri">Kirjeldus</dt>
+                <dd class="liikme-kirjeldus">Tartu Ülikooli tudeng, kelle huvialadeks on programmeerimine ja disain.</dd>
+                <dt class="sisu-pealkiri">Portfoolio</dt>
+                <dd class="liikme-portfoolio"><a href="https://github.com/davidson-python">Vaata portfooliot</a></dd>
+            </div>
+        </dl>
+    </div>
+</main>
 
-<!--Button-->
-<div>
-    <button style="font-size: 20px; border-radius: 20px;"> Meiest
-    </button>
-</div>
-
-<!--image and license-->
-<div>
-    <img src="" alt="">
-    <h3>License</h3>
+<div class="bottom_license">
+    <hr>
+    <p>&copy; 2026 Fitness Mavericks</p>
 </div>
 
 </body>
