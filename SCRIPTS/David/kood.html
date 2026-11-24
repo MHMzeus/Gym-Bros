@@ -7,41 +7,26 @@
     <link rel="stylesheet" href="kood.css">
 </head>
 <body>
-    <header>
-        <h1>Fitness Mavericks</h1>
-        
-        <!--buttons-->
-<div>
-    <nav>
-    <a href="kood.html">
-    <button style="font-size: 20px; border-radius: 20px;"> 
-    Meiest
-    </button></a>
+<header class="peamine-pais">
+    <div class="logo-ala">
+        <img src="images/Fitness_Mavericks.png" alt="Fitness Mavericks icon">
+        <a href="kood.html">Fitness Mavericks</a>
+    </div>
 
-    <a href="Keha_trenn.html">
-    <button style="font-size: 20px; border-radius: 20px;"> 
-    Keha trenn
-    </button></a>
-
-    <a href="saavutused.html">
-    <button style="font-size: 20px; border-radius: 20px;"> 
-    Mida saavutad?
-    </button></a>
-
-    <a href="plaan.html">
-    <button style="font-size: 20px; border-radius: 20px;"> 
-    Plaan
-    </button></a>
-
-    <a href="kontaktid.html">
-    <button style="font-size: 20px; border-radius: 20px;"> 
-    Kontaktid
-    </button></a>
+    <nav class="menu-ala" aria-label="Põhinavigatsioon">
+        <input class="input-mode" type="checkbox" id="darkmode-toggle">
+        <label class="toggle-mode" for="darkmode-toggle" aria-label="Vaheta tumedat ja heledat režiimi"></label>
+        <a href="Keha_trenn.html" class="btn">Keha trenn</a>
+        <a href="Maverick_mida_saavutad.html" class="btn">Mida saavutad?</a>
+        <a href="team.html" class="btn">Meist</a>
+        <a href="#" class="btn">Kontaktid</a>
     </nav>
-</div>
-    </header>
+</header>
 
-    <main>
+<hr>
+
+    <main class="section">
+        <div class="description">
         <h2>Tere tulemast!</h2>
         <p>
             Treenimiseks ei pea alati jõusaali minema.
@@ -57,24 +42,16 @@
                 Mõne harjutuse jaoks on vaja kangi või muud varustust.
             </p>
         </details>
-
-        <p>
-            <a href="plaan.html">Vaata harjutusi</a>
-        </p>
+            <a href="Keha_trenn.html" class="btn">Vaata harjutusi</a>
+        </div>
+        <div class="image">
+            <img src="images/lumberjack-brutal-red-beard-muscled-260nw-644026576.webp" alt="Keharaskusega treening">
+        </div>
     </main>
 
-    <footer>
-        <p>Fitness Mavericks — õppeprojekt</p>
-    </footer>
-
-<!--label and input-->
-<div>
-    <h2>Fillable form</h2>
-    <label for="gmail">gmail:</label>
-    <input type="text" id="gmail">
-    <br>
-    <label for="reason">reason</label>
-    <input type="text" id="reason">
+<div class="bottom_license">
+    <hr>
+    <p>&copy; 2026 Fitness Mavericks</p>
 </div>
 </body>
 </html>

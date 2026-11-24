@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="Mida_saavutad.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link id="favicon" rel="icon" href="images/Fitness_Mavericks.png">
+    <title>Fitness Mavericks</title>
+
+</head>
+<body>
+
+<header class="peamine-pais">
+    <div class="logo-ala">
+        <img src="images/Fitness_Mavericks.png" alt="Fitness Mavericks Icon">
+        <a href="kood.html">Fitness Mavericks</a>
+    </div>
+
+    <nav class="menu-ala" aria-label="Põhinavigatsioon">
+        <input class="input-mode" type="checkbox" id="darkmode-toggle">
+        <label class="toggle-mode" for="darkmode-toggle" aria-label="Vaheta tumedat ja heledat režiimi"></label>
+        <a href="Maverick_keha_trenn.html" class="btn">Keha Trenn</a>
+        <a href="Maverick_mida_saavutad.html" class="btn">Mida Saavutad?</a>
+        <a href="team.html" class="btn">Meist</a>
+        <a href="#" class="btn">Kontaktid</a>
+    </nav>
+</header>
+<hr>
+
+<main class="content-ala">
+    <h1>Mida saad saavutada?</h1>
+    <p>Korrapärane keha- ja jõutreening aitab parandada jõudu, vastupidavust, liikuvust ning üldist heaolu.</p>
+    <ul>
+        <li>Tugevamad lihased ja parem kehakontroll</li>
+        <li>Parem tasakaal ja liigesteliikuvus</li>
+        <li>Suurem igapäevane vastupidavus</li>
+    </ul>
+</main>
+
+<!--Logo dark mode changer-->
+<script>
+    const Toggle = document.querySelector('.input-mode');
+    const mavImage = document.querySelector('.logo-ala img');
+
+    Toggle.addEventListener('change', () => {
+        const Dark = Toggle.checked;
+
+    if (mavImage) {
+        mavImage.src = 'images/Fitness_Mavericks.png';
+    }
+    });
+</script>
+
+<hr>
+
+<!--license-->
+
+<div class="bottom_license">
+<hr>
+
+<p>&copy; 2026 Fitness Mavericks</p>
+</div>
+
+</body>
+</html>
