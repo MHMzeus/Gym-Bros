@@ -19,7 +19,7 @@
     <audio src="/Almost_finalized_pages/Audio/Cut_Button_Audio.mp3" id="mavAudio4" preload="auto"></audio>
 
     <div class="logo-ala">
-        <img src="/Almost_finalized_pages/Logo/Fitness_Mavericks_Valge.png" alt="Fitness Mavericks Icon">
+        <img src="/Almost_finalized_pages/Logo/Fitness_Mavericks_Valge.png" alt="Fitness Mavericks Icon" id="maverick_logo">
         <a href="Maverick_Front_Page.html" onclick="playMavAudio('mavAudio2')">Fitness Mavericks</a>
     </div>
 
@@ -54,19 +54,7 @@
 </div>
 
 <!--Logo dark mode changer-->
-<script>
-    const Toggle = document.querySelector('.input-mode');
-    const mavImage = document.querySelector('.logo-ala img');
-
-    Toggle.addEventListener('change', () => {
-        const Dark = Toggle.checked;
-
-    if (mavImage) {
-        mavImage.src = Dark ? '/Almost_finalized_pages/Logo/Fitness_Mavericks.png' : '/Almost_finalized_pages/Logo/Fitness_Mavericks_Valge.png'
-
-    }
-    });
-</script>
+<script src="/Almost_finalized_pages/SCRIPTS/Logo_Shifting.js"></script>
 
 <script>
     var mavButton = document.getElementById("mavAudio1");
