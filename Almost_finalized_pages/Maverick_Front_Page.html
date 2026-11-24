@@ -85,7 +85,7 @@
     mavButton.addEventListener("canplaythrough", () => {
         buttonLinks.forEach(btn => {
             btn.addEventListener("click", (e) => {
-                e.preventDefault(); // Prevent immediate navigation
+                e.preventDefault();
                 const href = btn.getAttribute("href");
                 setTimeout(() => {
                     window.location = href;
