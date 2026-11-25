@@ -85,7 +85,7 @@ body {
     margin-right: 20px;
 }
 
-/* Dark mode toggle */
+/*Tumeda/Valge lehe toggle */
 .toggle-mode {
     width: 104px;
     height: 48px;
@@ -156,7 +156,7 @@ body {
     transform: translateY(-1px);
 }
 
-/*Aligning the image with the text*/
+/*Lehe sisu paigutamine*/
 .section {
     display: flex;
     justify-content: space-around;
@@ -181,7 +181,7 @@ body {
     object-fit: cover;
 }
 
-/*Front page description*/
+/*Pea lehe tekst*/
 .description {
     display: inline-flex;
     flex-direction: column;
@@ -207,7 +207,7 @@ body {
     margin-left: 0%;
 }
 
-/* license centralization */
+/*Lehe litsents */
 .bottom_license {
     color: var(--text-color);
     display: flex;
