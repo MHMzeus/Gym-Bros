@@ -1,3 +1,4 @@
+/* Määrab tumeda režiimi värvid ja korduvkasutatavad kujundusväärtused. */
 :root {
     --page-color:#0c0808;
     --text-color: #ffe3e3;
@@ -16,6 +17,7 @@
     --light-box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
 }
 
+/* Vahetab värvid heleda režiimi vastu, kui kuvarežiimi lüliti on sees. */
 :root:has(.input-mode:checked) {
     --page-color: var(--light-page-color);
     --text-color: var(--light-text-color);
@@ -26,6 +28,7 @@
     --hover-color: var(--light-hover-color);
 }
 
+/* Kujundab lehe osade vahelise värvilise eraldusjoone. */
 hr {
     border: none;
     height: 5px;
@@ -34,7 +37,7 @@ hr {
     background: linear-gradient(to right, transparent, var(--border-color), transparent);
 }
 
-/*Üldine lehe paigutus*/
+/* Määrab lehe üldise fondi, joondamise ja taustavärvi. */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin-left: auto;
@@ -44,7 +47,7 @@ body {
     transition: var(--transform), color var(--transform);
 }
 
-/* Ühine logo ja menüü jaotamine kahele poole */
+/* Paigutab logo ja menüü päise vastaspooltele. */
 .peamine-pais {
     display: flex;
     justify-content: space-between;
@@ -52,19 +55,21 @@ body {
     margin-left: 5%;
 }
 
-/*Pilt/Logo*/
+/* Joondab logo ja saidi nime vertikaalselt. */
 .logo-ala {
     display: inline-flex;
     flex-direction: column;
     align-items: center;
 }
 
+/* Piirab logo laiust ja säilitab selle proportsioonid. */
 .logo-ala img {
     max-width: 100px;
     height: auto;
     margin-bottom: 2px;
 }
 
+/* Kujundab logo all oleva saidi nime lingi. */
 .logo-ala a {
     text-decoration: none;
     color: var(--text-color);
@@ -73,7 +78,7 @@ body {
     font-weight: 700;
 }
 
-/* Menüü paigutus*/
+/* Paigutab menüüelemendid ritta ja lubab neil ruumipuudusel murduda. */
 .menu-ala {
     display: inline-flex;
     flex-wrap: wrap;
@@ -81,7 +86,7 @@ body {
     margin-right: 20px;
 }
 
-/* Dark mode toggle */
+/* Kujundab kuvarežiimi lüliti tausta ja klõpsuala. */
 .toggle-mode {
     width: 104px;
     height: 48px;
@@ -94,6 +99,7 @@ body {
     transition: var(--transform);
 }
 
+/* Loob lüliti sees liikuva nupu. */
 .toggle-mode:after {
     content: "";
     width: 40px;
@@ -108,26 +114,29 @@ body {
     transition: var(--transform);
 }
 
+/* Peidab märkeruudu nähtavalt, kuid jätab lüliti juhtimiseks alles. */
 .input-mode {
     width: 0;
     height: 0;
     visibility: hidden;
 
 }
+/* Muudab lüliti tausta valitud märkeruudu korral. */
 .input-mode:checked + .toggle-mode {
     background: #0c0808;
 }
+/* Nihutab lüliti nuppu ja muudab selle värvi valitud olekus. */
 .input-mode:checked + .toggle-mode:after {
     left: 99px;
     transform: translate(-100%);
     background: linear-gradient(180deg, #b6a3a3, #ddd7d7);
 }
+/* Laiendab lüliti nuppu vajutamise ajal. */
 .toggle-mode:active:after{
     width: 45px;
 }
 
-/* Button */
-/* Menüü nupud */
+/* Kujundab navigeerimislingid nuppudena. */
 .btn {
     text-decoration: none;
     background-color: var(--button-color);
@@ -142,7 +151,7 @@ body {
     transition: var(--transform);
 }
 
-/*Nupu hover efekt*/
+/* Tõstab nupu kursori kohal esile ja liigutab seda ülespoole. */
 .btn:hover {
     background-color: #f0f0f0;
     color: var(--hover-color);
@@ -150,11 +159,12 @@ body {
     transform: translateY(-5px);
 }
 
+/* Annab nupule vajutamise ajal vajutatud oleku efekti. */
 .btn:active {
     transform: translateY(-1px);
 }
 
-/* license centralization */
+/* Joondab autoriõiguse teate jaluses keskele. */
 .bottom_license {
     color: var(--text-color);
     display: flex;
@@ -165,6 +175,7 @@ body {
     margin-top: 60px;
 }
 
+/* Piirab põhisisu laiuse ja lisab selle ümber ruumi. */
 .content-ala {
     max-width: 1140px;
     margin: 35px auto 60px;
