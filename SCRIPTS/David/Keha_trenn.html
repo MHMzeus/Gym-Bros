@@ -1,21 +1,34 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
+<!-- Määrab HTML5 dokumendi tüübi. -->
 <html lang="et">
 <head>
+    <!-- Määrab brauseri vahelehel kuvatava ikooni. -->
+    <link rel="icon" href="images/darkomed-logo.png">
+    <!-- Määrab brauserile kasutatava märgikodeeringu. -->
     <meta charset="UTF-8">
+    <!-- Kohandam lehe laiuse seadme ekraaniga. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Määrab brauseri vahelehel kuvatava pealkirja. -->
     <title>Fitness Mavericks | Keha trenn</title>
+    <!-- Laeb selle lehe kujundusreeglid. -->
     <link rel="stylesheet" href="test.css">
 </head>
 <body>
+<!-- Lehe päis sisaldab logo ja peamist navigeerimist. -->
 <header class="peamine-pais">
     <div class="logo-ala">
-        <img src="images/Fitness_Mavericks.png" alt="Fitness Mavericks icon">
+        <!-- Kuvab saidi logo ja viite avalehele. -->
+        <img src="images/darkomed-logo.png" alt="Fitness Mavericks icon">
         <a href="kood.html">Fitness Mavericks</a>
     </div>
 
+    <!-- Lehe peamenüü ja kuvarežiimi lüliti. -->
     <nav class="menu-ala" aria-label="Põhinavigatsioon">
+        <!-- Märkeruut juhib CSS-i kaudu tumeda ja heleda režiimi vahetamist. -->
         <input class="input-mode" type="checkbox" id="darkmode-toggle">
+        <!-- Silt muudab lüliti klikitavaks ja annab sellele ligipääsetava nime. -->
         <label class="toggle-mode" for="darkmode-toggle" aria-label="Vaheta tumedat ja heledat režiimi"></label>
+        <!-- Navigeerimislingid viivad saidi teistesse osadesse. -->
         <a href="Keha_trenn.html" class="btn">Keha trenn</a>
         <a href="Maverick_mida_saavutad.html" class="btn">Mida saavutad?</a>
         <a href="team.html" class="btn">Meist</a>
@@ -23,8 +36,10 @@
     </nav>
 </header>
 
+<!-- Eristab päise põhisisust. -->
 <hr>
 
+<!-- Lehe põhisisu keharaskusega treenimise kohta. -->
 <main class="content-ala">
     <h1>Keha trenn</h1>
     <p>
@@ -32,6 +47,7 @@
         nii kodus, pargis kui ka reisil olles.
     </p>
 
+    <!-- Loetleb keharaskusega treeningu peamised eelised. -->
     <h2>Miks valida masinate asemel keha trenn</h2>
     <ul>
         <li>
@@ -61,11 +77,13 @@
         </li>
     </ul>
 
+    <!-- Võrdleb jõusaalimasina harjutusi keharaskusega alternatiividega. -->
     <h2>Masinaharjutuste alternatiivid</h2>
     <p>
         Paljud masinaharjutused saab asendada lihtsate keharaskusega harjutustega, 
         mis aitavad arendada jõudu ja vastupidavust.
     </p>
+    <!-- Tabel seob harjutused vajaliku varustusega. -->
     <table>
         <tr>
             <th>Masinharjutused</th>
@@ -89,6 +107,7 @@
         </tr>
     </table>
 
+    <!-- Annab algajatele lihtsamad harjutuste variandid. -->
     <h2>Lihtsamad variandid</h2>
     <ul>
         <li>Kätekõverdusi saab teha vastu seina.</li>
@@ -96,6 +115,7 @@
         <li>Lõuatõmbeid saab teha kummilindi abiga.</li>
     </ul>
 
+    <!-- Lõpetab sisu treeningmeetodite kokkuvõttega. -->
     <h2>Kokkuvõte</h2>
     <p>
         Masinad ei ole halvad: need on väga tõhusad kindla lihase eraldamisel, 
@@ -105,20 +125,28 @@
     </p>
 </main>
 
+<!-- Lehe jalus ja autoriõiguse märge. -->
 <div class="bottom_license">
     <hr>
     <p>&copy; 2026 Fitness Mavericks</p>
 </div>
 
+<!-- Vahetab logo vastavalt valitud kuvarežiimile. -->
 <script>
+    // Leiab režiimi märkeruudu ja päise logo.
     const toggle = document.querySelector('.input-mode');
     const mavImage = document.querySelector('.logo-ala img');
 
-    toggle.addEventListener('change', () => {
+    // Valib heleda režiimi või tumeda režiimi logo.
+    function updateLogo() {
         mavImage.src = toggle.checked
             ? 'images/Fitness_Mavericks.png'
-            : 'images/Fitness_Mavericks.png';
-    });
+            : 'images/darkomed-logo.png';
+    }
+
+    // Uuendab logo iga lülitamise järel ning lehe esmakordsel laadimisel.
+    toggle.addEventListener('change', updateLogo);
+    updateLogo();
 </script>
 </body>
 </html>
