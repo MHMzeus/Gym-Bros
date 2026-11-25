@@ -197,6 +197,96 @@ th, td {
     padding: 0 20px;
 }
 
+/* Harjutuste piltide paigutus*/
+
+.harjutused-ala {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 25px;
+    margin: 30px 0;
+}
+
+.harjutused-kaart {
+    background-color: rgba(12, 8, 8, 0.6);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    transition: var(--transform);
+}
+
+:root:has(.input-mode:checked) .harjutused-kaart {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.harjutused-kaart:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 20px rgba(161, 153, 243, 0.2);
+    border-color: var(--hover-color)
+}
+
+/*Kaardi pealkirja värvid*/
+
+.kaart-pealkiri {
+    color: var(--text-color);
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.kaart-pildid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.harjutus-pilt-ala {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    text-align: center;
+}
+
+.harjutus-pilt-ala img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 8px;
+}
+
+.harjutus-pilt-ala span {
+    font-size: 24px;
+    color: var(--text-color);
+    user-select: none;
+}
+
+.kaart-nool {
+    font-size: 24px;
+    color: var(--border-color);
+    user-select: none;
+}
+
+.varustus-margis {
+    background-color: var(--button-color);
+    color: var(--secondary-text);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    box-shadow: var(--box-shadow);
+}
 
 /* license centralization */
 .bottom_license {
