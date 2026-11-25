@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="images/Fitness_Mavericks.png">
+    <link rel="icon" href="images/darkomed-logo.png">
     <title>Fitness Mavericks/Team</title>
     <link rel="stylesheet" href="test.css">
 </head>
 <body>
 <header class="peamine-pais">
     <div class="logo-ala">
-        <img src="images/Fitness_Mavericks.png" alt="Fitness Mavericks icon">
+        <img src="images/darkomed-logo.png" alt="Fitness Mavericks icon">
         <a href="kood.html">Fitness Mavericks</a>
     </div>
 
@@ -53,6 +53,20 @@
     <hr>
     <p>&copy; 2026 Fitness Mavericks</p>
 </div>
+
+<script>
+    const toggle = document.querySelector('.input-mode');
+    const mavImage = document.querySelector('.logo-ala img');
+
+    function updateLogo() {
+        mavImage.src = toggle.checked
+            ? 'images/Fitness_Mavericks.png'
+            : 'images/darkomed-logo.png';
+    }
+
+    toggle.addEventListener('change', updateLogo);
+    updateLogo();
+</script>
 
 </body>
 </html>

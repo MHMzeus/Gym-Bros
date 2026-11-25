@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="Mida_saavutad.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link id="favicon" rel="icon" href="images/Fitness_Mavericks.png">
+    <link id="favicon" rel="icon" href="images/darkomed-logo.png">
     <title>Fitness Mavericks</title>
 
 </head>
@@ -12,7 +12,7 @@
 
 <header class="peamine-pais">
     <div class="logo-ala">
-        <img src="images/Fitness_Mavericks.png" alt="Fitness Mavericks Icon">
+        <img src="images/darkomed-logo.png" alt="Fitness Mavericks Icon">
         <a href="kood.html">Fitness Mavericks</a>
     </div>
 
@@ -42,13 +42,14 @@
     const Toggle = document.querySelector('.input-mode');
     const mavImage = document.querySelector('.logo-ala img');
 
-    Toggle.addEventListener('change', () => {
-        const Dark = Toggle.checked;
-
-    if (mavImage) {
-        mavImage.src = 'images/Fitness_Mavericks.png';
+    function updateLogo() {
+        mavImage.src = Toggle.checked
+            ? 'images/Fitness_Mavericks.png'
+            : 'images/darkomed-logo.png';
     }
-    });
+
+    Toggle.addEventListener('change', updateLogo);
+    updateLogo();
 </script>
 
 <hr>
