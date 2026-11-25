@@ -1,0 +1,210 @@
+:root {
+    --page-color:#0c0808;
+    --text-color: #ffe3e3;
+    --secondary-text: #030202;
+    --button-color: #a8daf7;
+    --border-color: #a199f3;
+    --hover-color: #607dff;
+    --transform: 0.4s;
+    --box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4), inset 0px -5px 15px rgba(255, 255, 255, 0.4);
+    --light-page-color:#f5f5f5;
+    --light-text-color: #1a1a1a;
+    --light-secondary-text: #ffffff;
+    --light-button-color: #1a1a1a;
+    --light-border-color: #f39999;
+    --light-hover-color: #e63946;
+    --light-box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+:root:has(.input-mode:checked) {
+    --page-color: var(--light-page-color);
+    --text-color: var(--light-text-color);
+    --secondary-text: var(--light-secondary-text);
+    --button-color: var(--light-button-color);
+    --border-color: var(--light-border-color);
+    --box-shadow: var(--light-box-shadow);
+    --hover-color: var(--light-hover-color);
+}
+
+hr {
+    border: none;
+    height: 5px;
+    width: 100%;
+    margin: 4px;
+    background: linear-gradient(to right, transparent, var(--border-color), transparent);
+}
+
+/*Üldine lehe paigutus*/
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.1;
+    background-color: var(--page-color);
+    transition: var(--transform), color var(--transform);
+}
+
+/* Ühine logo ja menüü jaotamine kahele poole */
+.peamine-pais {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-left: 5%;
+}
+
+/*Pilt/Logo*/
+.logo-ala {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-ala img {
+    max-width: 100px;
+    height: auto;
+    margin-bottom: 2px;
+}
+
+.logo-ala a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 16px;
+    margin: 0;
+    font-weight: 700;
+}
+
+/* Menüü paigutus*/
+.menu-ala {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-right: 20px;
+}
+
+/* Dark mode toggle */
+.toggle-mode {
+    width: 104px;
+    height: 48px;
+    position: relative;
+    display: block;
+    background: #a8daf7;
+    border-radius: 200px;
+    box-shadow: var(--box-shadow);
+    transition: var(--transform);
+}
+
+.toggle-mode:after {
+    content: "";
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    background: linear-gradient(180deg, #9d9aff, #000000);
+    border-radius: 180px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    transition: var(--transform);
+}
+
+.input-mode {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+
+}
+.input-mode:checked + .toggle-mode {
+    background: #0c0808;
+}
+.input-mode:checked + .toggle-mode:after {
+    left: 99px;
+    transform: translate(-100%);
+    background: linear-gradient(180deg, #b6a3a3, #ddd7d7);
+}
+.toggle-mode:active:after{
+    width: 45px;
+}
+
+/* Menüü nupud */
+.btn {
+    text-decoration: none;
+    background-color: var(--button-color);
+    color: var(--secondary-text);
+    border: 2px solid #1a1a1a;
+    cursor: pointer;
+    padding: 14px 25px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 30px;
+    box-shadow: var(--box-shadow);
+    transition: var(--transform);
+}
+
+/*Nupu hover efekt*/
+.btn:hover {
+    background-color: #f0f0f0;
+    color: var(--hover-color);
+    box-shadow: var(--box-shadow);
+    transform: translateY(-5px);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+}
+
+
+.content-ala,
+main.content-ala,
+main {
+    max-width: 1140px;
+    margin: 35px auto 60px;
+    padding: 0 20px;
+    color: var(--text-color);
+}
+
+.content-ala ul {
+    padding-left: 24px;
+
+}
+.content-ala li { 
+    margin-bottom: 12px;
+}
+
+table {
+    width: 100%;
+    margin: 20px 0;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid var(--border-color);
+    padding: 10px;
+    text-align: left;
+}
+
+.sisu-ala {
+    max-width: 1140px;
+    margin: 35px auto 10px;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.description-ala {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    max-width: 1140px;
+    margin: 30px auto 60px;
+    padding: 0 20px;
+}
+
+
+/* license centralization */
+.bottom_license {
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 60px;
+}

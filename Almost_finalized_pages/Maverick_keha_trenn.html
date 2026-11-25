@@ -9,18 +9,26 @@
 </head>
 <body>
 
+
+
 <header class="peamine-pais">
 
     <!--Audio elemendid-->
-    <audio src="/Almost_finalized_pages/Audio/Button_Sound_Effect.mp3" id="mavAudio1" preload="auto"></audio>
-    <audio src="/Almost_finalized_pages/Audio/Main_Page.mp3" id="mavAudio2" preload="auto"></audio>
-    <audio src="/Almost_finalized_pages/Audio/Shift_SFX.mp3" id="mavAudio3" preload="auto"></audio>
 
+        <audio src="/Almost_finalized_pages/Audio/Button_Sound_Effect.mp3" id="mavAudio1" preload="auto"></audio>
+        <audio src="/Almost_finalized_pages/Audio/Main_Page.mp3" id="mavAudio2" preload="auto"></audio>
+        <audio src="/Almost_finalized_pages/Audio/Shift_SFX.mp3" id="mavAudio3" preload="auto"></audio>
+        <audio src="/Almost_finalized_pages/Audio/Cut_Button_Audio.mp3" id="mavAudio4" preload="auto"></audio>
+
+
+    <!--Logo, Pealkiri, link tagasi pealehele ja Audio-->
     <div class="logo-ala">
-        <img src="/Almost_finalized_pages/Logo/Fitness_Mavericks_Valge.png" alt="Fitness Mavericks Icon" id="maverick_logo">
-        <a href="Maverick_Front_Page.html" onclick="playMavAudio('mavAudio2')">Fitness Mavericks</a>
+        <a href="Maverick_Front_Page.html" onclick="playMavAudio('mavAudio2')">
+        <img src="/Almost_finalized_pages/Logo/Fitness_Mavericks_Valge.png" href="Maverick_Front_Page.html" id="maverick_logo"></a>
+        <p>Fitness Mavericks</p>
     </div>
 
+    <!--Tume/Valge nupp, Nupud navigeerivad kasutajaid teistele lehtedele, Audio-->
     <nav class="menu-ala">
         <input class="input-mode" type="checkbox" id="darkmode-toggle" onclick="playMavAudio('mavAudio3')">
         <label class="toggle-mode" for="darkmode-toggle"></label>
@@ -31,7 +39,11 @@
     </nav>
 </header>
 
+
+
 <hr>
+
+
 
 <main class="content-ala">
     <h1>Treeeningujuhised</h1>
@@ -113,15 +125,23 @@
     </p>
 </main>
 
+
+
+<!--Litsents-->
 <div class="bottom_license">
     <hr>
     <p>&copy; 2026 Fitness Mavericks</p>
 </div>
 
+
+
 <!--Logo dark mode changer-->
 <script src="/Almost_finalized_pages/SCRIPTS/Logo_Shifting.js"></script>
 
+
+
 <script>
+    //https://www.youtube.com/watch?v=5Qo_vyN8bsM
     var mavButton = document.getElementById("mavAudio1");
     
     function playMavAudio(audioId) {
