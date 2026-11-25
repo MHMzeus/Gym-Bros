@@ -155,90 +155,6 @@ body {
     transform: translateY(-1px);
 }
 
-/* Tiimi sektsioon */
-.description-ala {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    margin-top: 30px;
-    margin-bottom: 50px;
-}
-
-.tiimi-ala {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 25px;
-    background-color: #f9f9f9;
-    border: 2px solid #000000;
-    border-radius: 12px;
-    padding: 25px;
-    box-shadow: 4px 4px 0px #000000; /* Õrna varju efekt */
-    max-width: 550px;
-    width: 100%;
-    margin: 0;
-}
-
-.tiimi-ala dd {
-    margin: 0;
-}
-
-.pildi-kast img {
-    width: 110px;
-    height: 110px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 2px solid #000000;
-    display: block;
-}
-
-.kaardi-sisu {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-}
-
-.liikme-nimi {
-    font-size: 22px;
-    font-weight: 700;
-    color: #000000;
-    margin: 0;
-}
-
-.liikme-roll {
-    font-size: 15px;
-    font-weight: 600;
-    color: #e63946;
-    margin: 0 0 10px 0;
-}
-
-.sisu-pealkiri {
-    font-size: 12px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    color: #666666;
-    margin-top: 6px;
-}
-
-.liikme-kirjeldus,
-.liikme-portfoolio {
-    font-size: 15px;
-    color: #1a1a1a;
-    margin: 0 0 6px 0;
-}
-
-.liikme-portfoolio a {
-    color: #000000;
-    font-weight: 600;
-    text-decoration: underline;
-    transition: color 0.2s ease;
-}
-
-.liikme-portfoolio a:hover {
-    color: #e63946;
-}
-
 /* Sisestusvorm kahe joone vahel */
 .vormi-ala {
     display: flex;
@@ -259,12 +175,17 @@ body {
     text-align: center;
 }
 
-.vormi-ala label {
-    font-weight: 600;
-    font-size: 15px;
-}
-
 .vormi-ala input {
+    padding: 10px 14px;
+    font-size: 15px;
+    border-radius: 8px;
+    border: 2px solid var(--border-color);
+    background-color: var(--page-color);
+    color: var(--text-color);
+    transition: var(--transform);
+}
+.vormi-ala textarea {
+    resize: vertical;
     padding: 10px 14px;
     font-size: 15px;
     border-radius: 8px;
