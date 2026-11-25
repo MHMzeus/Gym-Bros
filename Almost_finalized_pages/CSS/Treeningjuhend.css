@@ -199,14 +199,15 @@ th, td {
 
 /* Harjutuste piltide paigutus*/
 
-.harjutused-ala {
+.harjutused-ala,
+.harjutused-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(440px, 1fr));
     gap: 25px;
     margin: 30px 0;
 }
 
-.harjutused-kaart {
+.harjutus-kaart {
     background-color: rgba(12, 8, 8, 0.6);
     border: 1px solid var(--border-color);
     border-radius: 12px;
@@ -218,8 +219,8 @@ th, td {
     transition: var(--transform);
 }
 
-:root:has(.input-mode:checked) .harjutused-kaart {
-    background-color: rgba(255, 255, 255, 0.8);
+:root:has(.input-mode:checked) .harjutus-kaart {
+    background-color: rgba(255, 255, 255, 0.85);
 }
 
 .harjutused-kaart:hover {
@@ -229,7 +230,6 @@ th, td {
 }
 
 /*Kaardi pealkirja värvid*/
-
 .kaart-pealkiri {
     color: var(--text-color);
     font-size: 16px;
@@ -257,35 +257,58 @@ th, td {
     text-align: center;
 }
 
+/* Sunniob kõik pildid ühe suuruseks */
 .harjutus-pilt-ala img {
     width: 100%;
-    aspect-ratio: 4/3;
+    height: 170px;
+    max-width: 220px;
     object-fit: cover;
+    display: block;
     border-radius: 8px;
     border: 1px solid var(--border-color);
     margin-bottom: 8px;
 }
 
+/* Pildi alune nimi */
 .harjutus-pilt-ala span {
-    font-size: 24px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.3;
     color: var(--text-color);
-    user-select: none;
 }
 
 .kaart-nool {
     font-size: 24px;
     color: var(--border-color);
+    flex-shrink: 0;
     user-select: none;
 }
 
 .varustus-margis {
     background-color: var(--button-color);
     color: var(--secondary-text);
-    padding: 6px 16px;
+    padding: 6px 18px;
     border-radius: 20px;
     font-size: 13px;
-    font-weight: 600;
+    font-weight: 700;
     box-shadow: var(--box-shadow);
+}
+
+@media (max-width: 520px) {
+    .harjutused-ala,
+    .harjutused-container {
+        grid-template-columns: 1fr;
+    }
+    .kaart-pildid {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .harjutus-pilt-ala {
+        width: 100%;
+    }
+    .kaart-nool {
+        transform: rotate(90deg);
+    }
 }
 
 /* license centralization */
