@@ -1,3 +1,4 @@
+/*Hoiab universaalseid variableeid, mida saab paigutada mitmele erinevale CSSi reale. */
 :root {
     --page-color:#0c0808;
     --text-color: #ffe3e3;
@@ -16,6 +17,7 @@
     --light-box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
 }
 
+/*Kui .input-mode on checkitut siis variableid ilma light sõnaga vahetatakse välja (Nimi jääb samaks kuna ainult selle väärtus muutub)*/
 :root:has(.input-mode:checked) {
     --page-color: var(--light-page-color);
     --text-color: var(--light-text-color);
@@ -26,6 +28,7 @@
     --hover-color: var(--light-hover-color);
 }
 
+/*Universaalselt korrigeerib ära lehe jooned */
 hr {
     border: none;
     height: 5px;
@@ -54,7 +57,7 @@ body {
 
 /*Pilt/Logo*/
 .logo-ala {
-    display: inline-flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
 }
@@ -62,10 +65,11 @@ body {
 .logo-ala img {
     max-width: 100px;
     height: auto;
-    margin-bottom: 2px;
+    margin-bottom: -16px;
+
 }
 
-.logo-ala a {
+.logo-ala p {
     text-decoration: none;
     color: var(--text-color);
     font-size: 16px;
@@ -81,7 +85,7 @@ body {
     margin-right: 20px;
 }
 
-/* Dark mode toggle */
+/*Tumeda/Valge lehe toggle */
 .toggle-mode {
     width: 104px;
     height: 48px;
@@ -152,11 +156,11 @@ body {
     transform: translateY(-1px);
 }
 
-/*Aligning the image with the text*/
+/*Lehe sisu paigutamine*/
 .section {
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-start;
     padding: 80px 8%;
     gap: 50px;
 }
@@ -164,26 +168,23 @@ body {
 .image {
     flex: 1;
     display: inline-flex;
-    justify-content: center;
+    justify-content: flex-end;
 }
 
 .image img {
     width: 100%;
     max-width: 700px;
-    height: auto;
-    margin-left: 300px;
+    margin-left: 500px;
     border-radius: 20px;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15); 
     object-fit: cover;
 }
 
-/*Front page description*/
+/*Pea lehe tekst*/
 .description {
     display: inline-flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-top: 100px;
-    margin-bottom: 180px;
     color: var(--text-color);
 }
 
@@ -203,7 +204,16 @@ body {
     margin-left: 0%;
 }
 
-/* license centralization */
+.description details {
+    max-width: 900px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    margin-left: 0%;
+}
+
+/*Lehe litsents */
 .bottom_license {
     color: var(--text-color);
     display: flex;

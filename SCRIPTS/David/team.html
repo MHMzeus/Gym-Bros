@@ -1,22 +1,32 @@
 <!DOCTYPE html>
+<!-- Määrab HTML5 dokumendi tüübi. -->
 <html lang="et">
 <head>
+    <!-- Määrab märgikodeeringu ja mobiilivaate laiuse. -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="images/Fitness_Mavericks.png">
+    <!-- Määrab vahelehe ikooni ja pealkirja. -->
+    <link rel="icon" href="images/darkomed-logo.png">
     <title>Fitness Mavericks/Team</title>
+    <!-- Laeb lehe kujundusreeglid. -->
     <link rel="stylesheet" href="test.css">
 </head>
 <body>
+<!-- Päises on saidi logo ja lehe navigeerimine. -->
 <header class="peamine-pais">
     <div class="logo-ala">
-        <img src="images/Fitness_Mavericks.png" alt="Fitness Mavericks icon">
+        <!-- Logo ja saidi nime link avalehele. -->
+        <img src="images/darkomed-logo.png" alt="Fitness Mavericks icon">
         <a href="kood.html">Fitness Mavericks</a>
     </div>
 
+    <!-- Peamenüü koos kuvarežiimi lülitiga. -->
     <nav class="menu-ala" aria-label="Põhinavigatsioon">
+        <!-- Märkeruut muudab lehe kuvarežiimi. -->
         <input class="input-mode" type="checkbox" id="darkmode-toggle">
+        <!-- Lüliti silt on kasutajale nähtav juhtnupp. -->
         <label class="toggle-mode" for="darkmode-toggle" aria-label="Vaheta tumedat ja heledat režiimi"></label>
+        <!-- Lingid avavad saidi vastavad lehed. -->
         <a href="Keha_trenn.html" class="btn">Keha trenn</a>
         <a href="Maverick_mida_saavutad.html" class="btn">Mida saavutad?</a>
         <a href="team.html" class="btn">Meist</a>
@@ -24,18 +34,21 @@
     </nav>
 </header>
 
+<!-- Eristab päist meeskonna sisust. -->
 <hr>
 
+<!-- Meeskonna tutvustus ja liikmekaart. -->
 <main>
     <div class="sisu-ala">
         <h1>Meie tiim</h1>
         <p>Tutvu Fitness Mavericksi meeskonnaga.</p>
     </div>
 
+    <!-- Kuvab meeskonnaliikme foto, rolli, kirjelduse ja portfoolio. -->
     <div class="description-ala">
         <dl class="tiimi-ala">
             <div class="pildi-kast">
-                <img src="images/David_pilt.jpg" alt="David Chiboshvili">
+                <img src="../../Almost_finalized_pages/Images/David_Chiboshvili.jpg" alt="David Chiboshvili">
             </div>
             <div class="kaardi-sisu">
                 <dt class="liikme-nimi">David Chiboshvili</dt>
@@ -49,10 +62,29 @@
     </div>
 </main>
 
+<!-- Jaluses kuvatakse autoriõiguse märge. -->
 <div class="bottom_license">
     <hr>
     <p>&copy; 2026 Fitness Mavericks</p>
 </div>
+
+<!-- Vahetab logo vastavalt valitud kuvarežiimile. -->
+<script>
+    // Leiab kuvarežiimi märkeruudu ja päise logo.
+    const toggle = document.querySelector('.input-mode');
+    const mavImage = document.querySelector('.logo-ala img');
+
+    // Valib heleda või tumeda režiimi jaoks sobiva logo.
+    function updateLogo() {
+        mavImage.src = toggle.checked
+            ? 'images/Fitness_Mavericks.png'
+            : 'images/darkomed-logo.png';
+    }
+
+    // Uuendab logo lülitamisel ja lehe laadimisel.
+    toggle.addEventListener('change', updateLogo);
+    updateLogo();
+</script>
 
 </body>
 </html>

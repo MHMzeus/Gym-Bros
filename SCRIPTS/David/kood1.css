@@ -1,4 +1,4 @@
-/*Üldine lehe paigutus*/
+/* Määrab lehe üldise fondi, värvid, laiuse ja tekstivahed. */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color:#ffffff;
@@ -11,7 +11,7 @@ body {
     line-height: 1.6;
 }
 
-/* Ühine päis logo ja menüü jaoks*/
+/* Paigutab logo ja menüü ühisesse päiseritta. */
 .peamine-pais {
     display: flex;
     justify-content: space-between;
@@ -22,19 +22,21 @@ body {
     width: 100%;
 }
 
-/*Pilt/Logo*/
+/* Joondab logo ja saidi nime üksteise alla. */
 .logo-ala {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+/* Piirab logo laiust ja säilitab pildi proportsioonid. */
 .logo-ala img {
     max-width: 90px;
     height: auto;
     margin-bottom: 5px;
 }
 
+/* Vormindab logo all oleva saidi nime pealkirja. */
 .logo-ala h5 {
     color: #000000;
     font-size: 13px;
@@ -42,7 +44,7 @@ body {
     font-weight: 700;
 }
 
-/* Menüü paigutus paremale üles nurka reana */
+/* Paigutab menüü nupud paremale ja lubab neil kitsal alal murduda. */
 .menu-ala {
     display: flex;
     flex-wrap: wrap;
@@ -50,7 +52,7 @@ body {
     justify-content: flex-end;
 }
 
-/* Menüü nupud */
+/* Kujundab menüü nuppude ja sisendnuppude põhiilme. */
 .menu-ala button, .menu-ala input[type="button"] {
     background-color: transparent;
     border: none;
@@ -63,7 +65,7 @@ body {
     transition: color 0.3s, background-color 0.3s;
 }
 
-/*Pealkirjad*/
+/* Vormindab lehe pealkirjad ja rõhutatud tekstid. */
 h1, h2, h3, b, strong {
     color: #000000;
     font-weight: 700;
@@ -71,7 +73,7 @@ h1, h2, h3, b, strong {
     margin-bottom: 25px;
 }
 
-/* Nupud ja navigatsioon */
+/* Kujundab vormi- ja tegevusnuppude üldise välimuse. */
 button, input[type="submit"], input[type="button"] {
     background-color: #ffffff;
     color: #000000;
@@ -85,14 +87,14 @@ button, input[type="submit"], input[type="button"] {
     transition: all 0.3s ease;
 }
 
-/*Nupu hover efekt*/
+/* Muudab menüünuppu kursori kohal olles. */
 .menu-ala button:hover, .menu-ala input[type="button"]:hover{
     background-color: #f0f0f0;
     color: #e63946;
     box-shadow: none;
 }
 
-/* "Sisesta teave" sektsioon */
+/* Paigutab vormi elemendid veergu ja kujundab vormi konteineri. */
 form {
     display: flex;
     flex-direction: column;
@@ -105,13 +107,14 @@ form {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Õrna varju efekt */
 }
 
+/* Eristab vormi väljade silte kirjastiiliga. */
 form label {
     font-weight: 600;
     font-size: 14px;
     margin-bottom: -5px;
 }
 
-/* Tekstiväljad ja tekstialad */
+/* Ühtlustab tekstiväljade suuruse, äärised ja sisevahed. */
 input[type="text"], input[type="email"], input:not([type="submit"]):not([type="button"]) {
     padding: 12px;
     border: 1px solid #cccccc;
@@ -121,13 +124,14 @@ input[type="text"], input[type="email"], input:not([type="submit"]):not([type="b
     box-sizing: border-box;
     transition: border-color 0.3s, box-shadow 0.3s;
 }
-/* Lahtri aktiivseks tegemine*/
+/* Tõstab fookuses oleva välja visuaalselt esile. */
 input:focus {
     outline: none;
     border-color: #e63946;
     box-shadow: 0 0 0 3px rgba(230, 57, 70, 0.15)
 }
 
+/* Joonistab lehe laiuse roosaka eraldusjoone. */
 hr {
     max-width: 100%;
     width: 100%;

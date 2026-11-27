@@ -10,40 +10,58 @@
 </head>
 <body>
 
+
+
 <header class="peamine-pais">
 
     <!--Audio elemendid-->
-    <audio src="/Almost_finalized_pages/Audio/Button_Sound_Effect.mp3" id="mavAudio1" preload="auto"></audio>
-    <audio src="/Almost_finalized_pages/Audio/Main_Page.mp3" id="mavAudio2" preload="auto"></audio>
-    <audio src="/Almost_finalized_pages/Audio/Shift_SFX.mp3" id="mavAudio3" preload="auto"></audio>
-    <audio src="/Almost_finalized_pages/Audio/Cut_Button_Audio.mp3" id="mavAudio4" preload="auto"></audio>
 
+        <audio src="/Almost_finalized_pages/Audio/Button_Sound_Effect.mp3" id="mavAudio1" preload="auto"></audio>
+        <audio src="/Almost_finalized_pages/Audio/Main_Page.mp3" id="mavAudio2" preload="auto"></audio>
+        <audio src="/Almost_finalized_pages/Audio/Shift_SFX.mp3" id="mavAudio3" preload="auto"></audio>
+        <audio src="/Almost_finalized_pages/Audio/Cut_Button_Audio.mp3" id="mavAudio4" preload="auto"></audio>
+
+
+    <!--Logo, Pealkiri, link tagasi pealehele ja Audio-->
     <div class="logo-ala">
-        <img src="/Almost_finalized_pages/Logo/Fitness_Mavericks_Valge.png" alt="Fitness Mavericks Icon" id="maverick_logo">
-        <a href="Maverick_Front_Page.html" onclick="playMavAudio('mavAudio2')">Fitness Mavericks</a>
+        <a href="Maverick_Front_Page.html" onclick="playMavAudio('mavAudio2')">
+        <img src="/Almost_finalized_pages/Logo/Fitness_Mavericks_Valge.png" href="Maverick_Front_Page.html" id="maverick_logo"></a>
+        <p>Fitness Mavericks</p>
     </div>
 
+    <!--Tume/Valge nupp, Nupud navigeerivad kasutajaid teistele lehtedele, Audio-->
     <nav class="menu-ala">
         <input class="input-mode" type="checkbox" id="darkmode-toggle" onclick="playMavAudio('mavAudio3')">
         <label class="toggle-mode" for="darkmode-toggle"></label>
         <div class="background-shift"></div>
-        <a href="Maverick_keha_trenn.html" class="btn" onclick="playMavAudio('mavAudio1')">Keha Trenn</a>
+        <a href="Maverick_treeningjuhend.html" class="btn" onclick="playMavAudio('mavAudio1')">Treeningujuhised</a>
         <a href="Maverick_meist.html" class="btn" onclick="playMavAudio('mavAudio1')">Meist</a>
         <a href="Maverick_kontaktid.html" class="btn" onclick="playMavAudio('mavAudio1')">Kontaktid</a>
     </nav>
 </header>
 
+
+
 <hr>
 
-<!--Image-->
+
+
 <section class="section">
         <!--header and paragraph and button-->
         <div class="description">
-            <h1>Sissejuhatav header</h1>
-            <p>Sisu...</p>
+            <h1>Tere tulemast Fitness Mavericks veebilehele!</h1>
+            <p>Siit saad vajalikku informatsiooni, et olla teadlikum masina-ja keharaskusega trennist.</p>
             <details class="btn" onclick="playMavAudio('mavAudio4')">
             <summary>Loe rohkem</summary>
-            <p>Rohkem Sisu...</p>
+            <p><i>Mida Fitness Mavericksi lehelt leiad?</i></p>
+            <ul>
+            <li><b>Treeningujuhised:</b> praktilised nõuanded, harjutused ning alternatiivid keharaskusega treenimiseks.</li>
+            <li><b>Meist:</b> tutvu meie tiimiliikmete ja nende panusega.</li>
+            <li><b>Kontaktid:</b> võta meiega julgelt ühendust, kui sul on küsimusi või ettepanekuid.</li>
+            <br>
+            <hr>
+            </ul>
+            <p>Fitness Mavericks on loodud selleks, et aidata sul teadlikumalt treenida ning vajadusel jõusaaliharjutused keharaskusega harjutustega asendada. Siit leiad selged juhised jõusaalimasinate õigeks seadistamiseks, tõhusad keharaskusega harjutused ning nõuanded, kuidas vältida levinumaid vigu ja vigastusi. Olenemata sellest, kas oled alles alustamas või soovid oma tehnikat lihvida, aitavad meie juhendid sul treeningutest maksimumi võtta nii kodus, jõusaalis kui ka reisil.</p>
             </details>
         </div>
         <div class="image">
@@ -51,18 +69,24 @@
         </div>
 </section>
 
-<!--image and license-->
 
+
+<!--Litsents-->
 <div class="bottom_license">
-<hr>
-
-<p>&copy; 2026 Fitness Mavericks</p>
+    <hr>
+    <p>&copy; 2026 Fitness Mavericks</p>
 </div>
 
-<!--Logo dark mode changer-->
+
+
+<!--Logo Valge/Tume skript-->
 <script src="/Almost_finalized_pages/SCRIPTS/Logo_Shifting.js"></script>
 
+
+
+<!--Nupude hääle skript-->
 <script>
+    //https://www.youtube.com/watch?v=5Qo_vyN8bsM
     var mavButton = document.getElementById("mavAudio1");
     
     function playMavAudio(audioId) {
