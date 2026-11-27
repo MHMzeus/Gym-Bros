@@ -18,16 +18,19 @@
     <audio src="/Almost_finalized_pages/Audio/Main_Page.mp3" id="mavAudio2" preload="auto"></audio>
     <audio src="/Almost_finalized_pages/Audio/Shift_SFX.mp3" id="mavAudio3" preload="auto"></audio>
 
+    <!--Logo, Pealkiri, link tagasi pealehele ja Audio-->
     <div class="logo-ala">
-        <img src="/Almost_finalized_pages/Logo/Fitness_Mavericks_Valge.png" alt="Fitness Mavericks Icon" id="maverick_logo">
-        <a href="Maverick_Front_Page.html" onclick="playMavAudio('mavAudio2')">Fitness Mavericks</a>
+        <a href="Maverick_Front_Page.html" onclick="playMavAudio('mavAudio2')">
+        <img src="/Almost_finalized_pages/Logo/Fitness_Mavericks_Valge.png" href="Maverick_Front_Page.html" id="maverick_logo"></a>
+        <p>Fitness Mavericks</p>
     </div>
 
+    <!--Tume/Valge nupp, Nupud navigeerivad kasutajaid teistele lehtedele, Audio-->
     <nav class="menu-ala">
         <input class="input-mode" type="checkbox" id="darkmode-toggle" onclick="playMavAudio('mavAudio3')">
         <label class="toggle-mode" for="darkmode-toggle"></label>
         <div class="background-shift"></div>
-        <a href="Maverick_keha_trenn.html" class="btn" onclick="playMavAudio('mavAudio1')">Treeningujuhised</a>
+        <a href="Maverick_treeningjuhend.html" class="btn" onclick="playMavAudio('mavAudio1')">Treeningujuhised</a>
         <a href="Maverick_meist.html" class="btn" onclick="playMavAudio('mavAudio1')">Meist</a>
         <a href="Maverick_kontaktid.html" class="btn" onclick="playMavAudio('mavAudio1')">Kontaktid</a>
     </nav>
@@ -40,7 +43,7 @@
 
 
 <main class="content-ala">
-    <h1>Treeeningujuhised</h1>
+    <h1>Treeningujuhised</h1>
     <p>
         Keharaskusega treenimine on mugav ja efektiivne võimalus arenguks 
         nii kodus, pargis kui ka reisil olles.
@@ -93,7 +96,7 @@
                 </div>
                 <div class="kaart-nool">&#10140;</div>
                 <div class="harjutus-pilt-ala">
-                    <img src="/Almost_finalized_pages/Images/push-ups.jpg" alt="Kätekõverdused">
+                    <img src="/Almost_finalized_pages/Images/pexels-mikegles-14679050.jpg" alt="Kätekõverdused">
                     <span>Kätekõverdused</span>
                 </div>
             </div>
@@ -101,10 +104,10 @@
         </div>
 
         <div class="harjutus-kaart">
-            <h3 class="kaart-pealkiri">JALAPRESS vs KÜKID</h3>
+            <h3 class="kaart-pealkiri">JALAPRESSID vs KÜKID</h3>
             <div class ="kaart-pildid">
                 <div class="harjutus-pilt-ala">
-                    <img src="/Almost_finalized_pages/Images/leg_press.jpg" alt="Jalapress">
+                    <img src="/Almost_finalized_pages/Images/pexels-marcuschanmedia-18060020.jpg" alt="Jalapress">
                     <span>Jalapress</span>
                 </div>
                 <div class="kaart-nool">&#10140;</div>
@@ -117,15 +120,15 @@
         </div>
 
         <div class="harjutus-kaart">
-            <h3 class="kaart-pealkiri">ÜLALT TÕMME vs LÕUATÕMME</h3>
+            <h3 class="kaart-pealkiri">ÜLALT TÕMBED vs LÕUATÕMBED</h3>
             <div class ="kaart-pildid">
                 <div class="harjutus-pilt-ala">
-                    <img src="/Almost_finalized_pages/Images/Let_pulldown.jpg" alt="Ülalt tõmme">
+                    <img src="/Almost_finalized_pages/Images/pexels-marcuschanmedia-18060085.jpg" alt="Ülalt tõmme">
                     <span>Ülalt tõmme</span>
                 </div>
                 <div class="kaart-nool">&#10140;</div>
                 <div class="harjutus-pilt-ala">
-                    <img src="/Almost_finalized_pages/Images/pull-ups.jpg" alt="Lõuatõmbed">
+                    <img src="/Almost_finalized_pages/Images/pexels-alexxdaoudd-7259823.jpg" alt="Lõuatõmbed">
                     <span>Lõuatõmbed</span>
                 </div>
             </div>
@@ -185,13 +188,13 @@
     <h2>Lihtsamad variandid</h2>
     <ul>
         <li>Kätekõverdusi saab teha vastu seina.</li>
-        <li>Kükke saab teha toolile istudes ja püsti tõustes</li>
+        <li>Kükke saab teha toolile istudes ja püsti tõustes.</li>
         <li>Lõuatõmbeid saab teha kummilindi abiga.</li>
     </ul>
 
     <h2>Kokkuvõte</h2>
     <p>
-        Masinad ei ole halvad nad on väga tõhusad kindla lihase eraldamisel, 
+        Masinad ei ole halvad, nad on väga tõhusad kindla lihase eraldamisel, 
         lihasmassi kasvatamisel või vigastuse taastumisel, kui koormust on vaja täpselt määrata.
         Parimad tulemused annavad tavaliselt vabade raskuste, keharaskuse ja masinate kombineerimine:
         põhifookus on vabadel raskustel ja keharaskusel ning masinad aitavad harjutuse viimistlemisel.
@@ -199,7 +202,7 @@
 </main>
 
 
-
+<!--Litsents-->
 <div class="bottom_license">
     <hr>
     <p>&copy; 2026 Fitness Mavericks</p>
@@ -212,7 +215,9 @@
 
 
 
+<!--Nupude hääle skript-->
 <script>
+    //https://www.youtube.com/watch?v=5Qo_vyN8bsM
     var mavButton = document.getElementById("mavAudio1");
     
     function playMavAudio(audioId) {
