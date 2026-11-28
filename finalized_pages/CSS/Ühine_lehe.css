@@ -156,52 +156,6 @@ body {
     transform: translateY(-1px);
 }
 
-/*Lehe sisu paigutamine*/
-.content-ala,
-main.content-ala,
-main {
-    max-width: 1140px;
-    margin: 35px auto 60px;
-    padding: 0 20px;
-    color: var(--text-color);
-}
-
-.content-ala ul {
-    padding-left: 24px;
-
-}
-.content-ala li { 
-    margin-bottom: 12px;
-}
-
-table {
-    width: 100%;
-    margin: 20px 0;
-    border-collapse: collapse;
-}
-
-th, td {
-    border: 1px solid var(--border-color);
-    padding: 10px;
-    text-align: left;
-}
-
-.sisu-ala {
-    max-width: 1140px;
-    margin: 35px auto 10px;
-    padding: 0 20px;
-    text-align: center;
-}
-
-.description-ala {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-    max-width: 1140px;
-    margin: 30px auto 60px;
-    padding: 0 20px;
-}
-
-
 /*Lehe litsents */
 .bottom_license {
     color: var(--text-color);
