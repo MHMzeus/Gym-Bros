@@ -94,6 +94,7 @@ body {
     background: #a8daf7;
     border-radius: 200px;
     box-shadow: var(--box-shadow);
+    cursor: pointer;
     transition: var(--transform);
 }
 
