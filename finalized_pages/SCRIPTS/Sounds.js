@@ -17,7 +17,7 @@ if (mavButton) {
                 const href = btn.getAttribute("href");
                 setTimeout(() => {
                     window.location = href;
-                }, mavButton.duration * 650);
+                }, mavButton.duration * 500);
             });
         });
     });
