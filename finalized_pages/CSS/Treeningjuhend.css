@@ -1,3 +1,4 @@
+/*Hoiab universaalseid variableeid, mida saab paigutada mitmele erinevale CSSi reale. */
 :root {
     --page-color:#0c0808;
     --text-color: #ffe3e3;
@@ -16,6 +17,7 @@
     --light-box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
 }
 
+/*Kui .input-mode on checkitut siis variableid ilma light sõnaga vahetatakse välja (Nimi jääb samaks kuna ainult selle väärtus muutub)*/
 :root:has(.input-mode:checked) {
     --page-color: var(--light-page-color);
     --text-color: var(--light-text-color);
@@ -26,6 +28,7 @@
     --hover-color: var(--light-hover-color);
 }
 
+/*Universaalselt korrigeerib ära lehe jooned */
 hr {
     border: none;
     height: 5px;
@@ -54,7 +57,7 @@ body {
 
 /*Pilt/Logo*/
 .logo-ala {
-    display: inline-flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
 }
@@ -62,10 +65,11 @@ body {
 .logo-ala img {
     max-width: 100px;
     height: auto;
-    margin-bottom: 2px;
+    margin-bottom: -16px;
+
 }
 
-.logo-ala a {
+.logo-ala p {
     text-decoration: none;
     color: var(--text-color);
     font-size: 16px;
@@ -81,7 +85,7 @@ body {
     margin-right: 20px;
 }
 
-/* Dark mode toggle */
+/*Tumeda/Valge lehe toggle */
 .toggle-mode {
     width: 104px;
     height: 48px;
@@ -197,8 +201,121 @@ th, td {
     padding: 0 20px;
 }
 
+/* Harjutuste piltide paigutus*/
 
-/* license centralization */
+.harjutused-ala,
+.harjutused-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(440px, 1fr));
+    gap: 25px;
+    margin: 30px 0;
+}
+
+.harjutus-kaart {
+    background-color: rgba(12, 8, 8, 0.6);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    transition: var(--transform);
+}
+
+:root:has(.input-mode:checked) .harjutus-kaart {
+    background-color: rgba(255, 255, 255, 0.85);
+}
+
+.harjutus-kaart:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 20px rgba(161, 153, 243, 0.2);
+    border-color: var(--hover-color)
+}
+
+/*Kaardi pealkirja värvid*/
+.kaart-pealkiri {
+    color: var(--text-color);
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.kaart-pildid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.harjutus-pilt-ala {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    text-align: center;
+}
+
+/* Sunnib kõik pildid ühe suuruseks */
+.harjutus-pilt-ala img {
+    width: 100%;
+    height: 170px;
+    max-width: 220px;
+    object-fit: cover;
+    display: block;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 8px;
+}
+
+/* Pildi alune nimi */
+.harjutus-pilt-ala span {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.3;
+    color: var(--text-color);
+}
+
+.kaart-nool {
+    font-size: 24px;
+    color: var(--border-color);
+    flex-shrink: 0;
+    user-select: none;
+}
+
+.varustus-margis {
+    background-color: var(--button-color);
+    color: var(--secondary-text);
+    padding: 6px 18px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 700;
+    box-shadow: var(--box-shadow);
+}
+
+@media (max-width: 520px) {
+    .harjutused-ala,
+    .harjutused-container {
+        grid-template-columns: 1fr;
+    }
+    .kaart-pildid {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .harjutus-pilt-ala {
+        width: 100%;
+    }
+    .kaart-nool {
+        transform: rotate(90deg);
+    }
+}
+
+/*Lehe litsents */
 .bottom_license {
     color: var(--text-color);
     display: flex;
